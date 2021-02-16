@@ -1,4 +1,3 @@
---------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
 
 import Data.Monoid (mappend)
@@ -6,11 +5,15 @@ import Hakyll
 
 main :: IO ()
 main = hakyll $ do
-  match "css/*" $ do
+  match "assets/*.js" $ do
+    route idRoute
+    compile copyFileCompiler
+
+  match "assets/*.css" $ do
     route idRoute
     compile compressCssCompiler
 
-  match "index.md" $ do
+  match "*.md" $ do
     route $ setExtension "html"
     compile $
       pandocCompiler
