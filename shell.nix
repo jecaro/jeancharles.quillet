@@ -11,5 +11,6 @@ mkShell {
     haskellPackages.haskell-language-server
     haskellPackages.hlint
     haskellPackages.implicit-hie
+    rsync
   ];
 }
