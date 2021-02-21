@@ -11,12 +11,12 @@
     <!-- Needed for bundle.min.*.js-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- Code for the menu and to generate toc -->
-    <script src="./assets/toc-and-menu.js">
+    <script src="/assets/toc-and-menu.js">
     </script>
 
     <!-- Main fonts for the site -->
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
-    <link href="./assets/style.css" rel="stylesheet" type="text/css">
+    <link href="/assets/style.css" rel="stylesheet" type="text/css">
   </head>
 
   <body>
@@ -35,20 +35,22 @@
 
         <nav id="main-nav">
           <ul class="main">
+            <li><a href="/pages/posts.html">Posts</a></li>
+            <li><a href="/pages/projects.html">Projects</a></li>
             <li><a href="https://github.com/jecaro/cv/raw/master/resume-en/jeancharles.quillet-en.pdf">CV</a></li>
-            <li><a href="/projects.html">Projects</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/pages/contact.html">Contact</a></li>
           </ul>
         </nav>
 
         <nav id="mobile-nav">
           <div class="menu"><a class="button">Menu</a>
             <div class="container">
-              <ul class="main">
-                <li><a href="https://github.com/jecaro/cv/raw/master/resume-en/jeancharles.quillet-en.pdf">CV</a></li>
-                <li><a href="/projects.html">Projects</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-              </ul>
+                <ul class="main">
+                    <li><a href="/pages/posts.html">Posts</a></li>
+                    <li><a href="/pages/projects.html">Projects</a></li>
+                    <li><a href="https://github.com/jecaro/cv/raw/master/resume-en/jeancharles.quillet-en.pdf">CV</a></li>
+                    <li><a href="/pages/contact.html">Contact</a></li>
+                </ul>
             </div>
           </div>
         </nav>
@@ -61,8 +63,18 @@
           $if(toc)$
           <nav id="toc" class="right-toc"></nav>
           $endif$
+
           $body$
         </div>
+
+        $if(date)$
+        <div class="meta">
+            <div class="meta-component">
+                <i class="far fa-calendar-alt fa-fw"></i>
+                $date$
+            </div>
+        </div>
+        $endif$
 
       </article>
 
@@ -79,6 +91,10 @@
           ·
           <a href="mailto:jeancharles.quillet@gmail.com" title="email">
             <i class="far fa-envelope"></i>
+          </a>
+          ·
+          <a href="/rss.xml" title="rss">
+            <i class="fa fa-rss-square"></i>
           </a>
         </div>
 

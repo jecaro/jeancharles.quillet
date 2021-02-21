@@ -1,0 +1,4 @@
+cradle:
+  cabal:
+    - path: "./site.hs"
+      component: "jeancharles-quillet:exe:site"

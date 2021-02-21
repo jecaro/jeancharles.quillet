@@ -4,7 +4,7 @@ title: Home
 
 ---
 
-Welcome !
+# Welcome !
 
 My name is Jean-Charles. I'm a passionate professional software developer.
 
@@ -22,4 +22,8 @@ folks of [Secucloud](https://www.secucloud.com/).
 Check out my
 [CV](https://github.com/jecaro/cv/raw/master/resume-en/jeancharles.quillet-en.pdf)
 if you want to know more about my experience and feel free to [reach
-out](/contact.html) for any matter.
+out](/pages/contact.html) for any matter.
+
+# Recent blog posts
+
+$partial("templates/posts.html")$
