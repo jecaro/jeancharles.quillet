@@ -21,6 +21,7 @@ import Hakyll
     field,
     fromGlob,
     getItemModificationTime,
+    getRoute,
     hakyll,
     idRoute,
     listField,
@@ -38,7 +39,6 @@ import Hakyll
     saveSnapshot,
     setExtension,
     templateBodyCompiler,
-    toFilePath,
     (.||.),
   )
 
@@ -139,11 +139,13 @@ priorityCtx = field "priority" $ pure . show . priority
       | otherwise = 0.8
 
 urlCtx :: Context String
-urlCtx = field "url" $ pure . url
+urlCtx = field "url" url
   where
     url (Item identifier _)
-      | matches indexPattern identifier = root
-      | otherwise = root <> toFilePath identifier
+      | matches indexPattern identifier = pure root
+      | otherwise = do
+        r <- getRoute identifier
+        pure $ root <> (fromMaybe mempty r)
     root = "https://jeancharles.quillet.org/"
 
 lastmodCtx :: Context String
