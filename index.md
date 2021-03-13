@@ -19,10 +19,8 @@ and various research laboratories.
 Now I develop cloud based network security software in Haskell for the great
 folks of [Secucloud](https://www.secucloud.com/).
 
-Check out my
-[CV](https://github.com/jecaro/cv/raw/master/resume-en/jeancharles.quillet-en.pdf)
-if you want to know more about my experience and feel free to [reach
-out](/pages/contact.html) for any matter.
+Check out my [CV](/pages/cv.html) if you want to know more about my experience
+and feel free to [reach out](/pages/contact.html) for any matter.
 
 # Recent blog posts
 
