@@ -45,7 +45,7 @@ import Hakyll
 main :: IO ()
 main = hakyll $ do
   -- Copy the assets
-  forM_ ["robots.txt", "assets/*.js"] $ \p -> match p $ do
+  forM_ ["robots.txt", "assets/*.js", "images/*"] $ \p -> match p $ do
     route idRoute
     compile copyFileCompiler
 
