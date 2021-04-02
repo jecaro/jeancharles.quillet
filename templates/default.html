@@ -78,12 +78,44 @@
         </div>
 
         $if(date)$
+          $if(version)$
         <div class="meta">
+          $else$
+        <div class="meta">
+          $endif$
+        $else$
+          $if(version)$
+        <div class="meta">
+          $else$
+          $endif$
+        $endif$
+
+        $if(date)$
             <div class="meta-component">
                 <i class="far fa-calendar-alt fa-fw"></i>
                 $date$
             </div>
+        $endif$
+        $if(version)$
+            <div class="meta-component">
+                <i class="fas fa-code-branch fa-fw"></i>
+                <a href="https://github.com/jecaro/jeancharles.quillet/commit/$version$" class="git-commit">
+                    $version$
+                </a>
+            </div>
+        $endif$
+
+        $if(date)$
+          $if(version)$
         </div>
+          $else$
+        </div>
+          $endif$
+        $else$
+          $if(version)$
+        </div>
+          $else$
+          $endif$
         $endif$
 
       </article>

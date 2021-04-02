@@ -6,6 +6,7 @@ build-type:         Simple
 executable site
   main-is:          site.hs
   build-depends:    base == 4.*
+                  , gitrev
                   , hakyll == 4.13.*
                   , relude
                   , time

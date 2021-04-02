@@ -1,7 +1,9 @@
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE TemplateHaskell #-}
 
 import Data.Time.Format (formatTime)
 import Data.Time.Locale.Compat (defaultTimeLocale)
+import Development.GitRev (gitHash)
 import Hakyll
   ( Compiler,
     Context,
@@ -31,6 +33,7 @@ import Hakyll
     makeItem,
     match,
     matches,
+    noResult,
     pandocCompiler,
     recentFirst,
     relativizeUrls,
@@ -94,7 +97,7 @@ main = hakyll $ do
     route $ setExtension "html"
     compile $
       pandocCompiler
-        >>= loadAndApplyTemplate defaultTemplate defaultContext
+        >>= loadAndApplyTemplate defaultTemplate (defaultContext <> gitCtx)
         >>= relativizeUrls
 
   -- And the index
@@ -129,6 +132,13 @@ main = hakyll $ do
 
 postCtx :: Context String
 postCtx = dateField "date" "%B %e, %Y" <> defaultContext
+
+-- Make the git hash appear in the meta tag of the contact page
+gitCtx :: Context String
+gitCtx = field "version" version
+  where
+    version (Item "pages/contact.md" _) = pure $ take 7 $(gitHash)
+    version _ = noResult ""
 
 priorityCtx :: Context String
 priorityCtx = field "priority" $ pure . show . priority
