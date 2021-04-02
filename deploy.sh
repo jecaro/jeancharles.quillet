@@ -6,6 +6,7 @@ set -o errexit
 
 # Check that the directory is clean
 # https://unix.stackexchange.com/a/394674
+git add .
 git diff-index --quiet HEAD
 
 # Build the site
