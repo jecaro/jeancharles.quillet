@@ -131,7 +131,10 @@ main = hakyll $ do
 -- The contexts
 
 postCtx :: Context String
-postCtx = dateField "date" "%B %e, %Y" <> defaultContext
+postCtx =
+  dateField "date" "%B %e, %Y"
+    <> constField "show-title" "true"
+    <> defaultContext
 
 -- Make the git hash appear in the meta tag of the contact page
 gitCtx :: Context String

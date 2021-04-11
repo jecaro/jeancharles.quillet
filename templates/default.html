@@ -69,6 +69,12 @@
 
       <article class="page">
 
+        $if(show-title)$
+        $if(title)$
+        <h1 class="title">$title$</h1>
+        $endif$
+        $endif$
+
         <div class="entry-content">
           $if(toc)$
           <nav id="toc" class="right-toc"></nav>
