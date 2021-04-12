@@ -74,8 +74,12 @@ deployment is now just a matter of pulling the latest image and restart the
 service.
 
 The project has been a success as I've used it for more than six months without
-any trouble. This project has allowed me to get to use [servant](), [lenses](),
-[RIO](), [QuickCheck](). It was a great fun to learn all this.
+any trouble. This project has allowed me to get to use
+[servant](https://docs.servant.dev/en/stable/),
+[lenses](https://hackage.haskell.org/package/lens),
+[RIO](https://hackage.haskell.org/package/rio),
+[QuickCheck](https://hackage.haskell.org/package/QuickCheck). It was a great
+fun to learn all this.
 
 # Open source contributions
 
