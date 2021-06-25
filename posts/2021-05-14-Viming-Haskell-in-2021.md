@@ -50,7 +50,7 @@ self: super: {
 Install it with:
 
 ```
-nix-env -iA nixos-unstable.neovim-nightly
+nix-env -iA nixos-unstable.neovim
 ```
 
 It will fail and complain about the bad hash but it will give you the right
