@@ -86,10 +86,12 @@ fun to learn all this.
 When I find the time, I like to contribute to open source projects. I made some
 modest contributions to these ones:
 
-- [smos](https://github.com/NorfairKing/smos): a comprehensive self-management
+* [ldap-client](https://github.com/alasconnect/ldap-client): Pure Haskell LDAP
+  client library implementing (the parts of) RFC 4511.
+* [smos](https://github.com/NorfairKing/smos): a comprehensive self-management
   system
-- [hatrace](https://github.com/nh2/hatrace): scripted strace
-- [path](https://github.com/commercialhaskell/path): support for well-typed
+* [hatrace](https://github.com/nh2/hatrace): scripted strace
+* [path](https://github.com/commercialhaskell/path): support for well-typed
   paths in Haskell
 * [termonad](https://github.com/cdepillabout/termonad): a terminal emulator
   configurable in Haskell
