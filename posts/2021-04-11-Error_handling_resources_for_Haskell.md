@@ -137,11 +137,19 @@ Matt Parson has written numerous posts about this subject:
 - [Plucking Constraints](https://www.parsonsmatt.org/2020/01/03/plucking_constraints.html)
 - [Plucking In, Plucking Out](https://www.parsonsmatt.org/2020/10/27/plucking_in_plucking_out.html)
 
+The library that came out of this idea:
+[plucky](https://hackage.haskell.org/package/plucky)
+
 He also made a pretty complete and well explained video about this subject at
 [lambda conf 2018](https://www.youtube.com/watch?v=A5c9kgDYXr8).
 
 I greatly appreciate his honesty in the part about the so called "good
 practices" that he presented as "some guy opinion".
+
+Other libraries based on open variants:
+
+- [oops](https://github.com/i-am-tom/oops)
+- [Excepts](https://hackage.haskell.org/package/haskus-utils-variant-3.0/docs/Haskus-Utils-Variant-Excepts.html)
 
 ## Chris Done
 
