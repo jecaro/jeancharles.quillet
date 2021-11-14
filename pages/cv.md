@@ -67,6 +67,13 @@ architecture.
 
 ---
 
+**[EPITECH](https://www.epitech.eu/en/)** - Rennes / France (Since 09/2021)
+
+I support the students with their Haskell projects (arithmetic evaluator, Lisp
+interpreter, image compressor, ...).
+
+---
+
 **[Scalian](https://www.scalian.com/)** - Rennes, France (04/2007 - 11/2020)
 
 As a subcontractor, I developed fixed price software for clients such as the
