@@ -7,7 +7,7 @@ executable site
   main-is:          site.hs
   build-depends:    base == 4.*
                   , gitrev
-                  , hakyll == 4.14.*
+                  , hakyll
                   , relude
                   , time
                   , time-locale-compat
