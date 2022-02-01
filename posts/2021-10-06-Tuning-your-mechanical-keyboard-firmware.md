@@ -37,10 +37,10 @@ a context menu in most GUI.
 
 [qmk] is an open source firmware for keyboards. It support a [huge number of
 boards](https://qmk.fm/keyboards/) and has plenty of
-[features](https://beta.docs.qmk.fm/using-qmk/software-features). In its
-[repository][qmk], it has a lot of examples for the different boards it
-supports. I recommend starting from there by copying an existing firmware
-source for your board, then tweak it to fit your needs.
+[features](https://docs.qmk.fm/#/). In its [repository][qmk], it has a lot of
+examples for the different boards it supports. I recommend starting from there
+by copying an existing firmware source for your board, then tweak it to fit
+your needs.
 
 # Additional layer
 
@@ -130,7 +130,7 @@ it on the additional layer on top of the `WIN` key. But there is already a
 light control keys their.
 
 So I used another neat [qmk] feature which is [tap
-dance](https://beta.docs.qmk.fm/using-qmk/software-features/feature_tap_dance).
+dance](https://docs.qmk.fm/#/feature_tap_dance).
 When I hit the `WIN` key twice during a short interval of time, the keyboard
 sends the `APP` key to the computer.
 
