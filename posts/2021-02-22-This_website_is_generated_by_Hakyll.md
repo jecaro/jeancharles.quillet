@@ -54,7 +54,7 @@ These are the files and directories I put with my content in. When I want a new
 page, I add it to the [pages][pages] directory. When I write a new post, I add
 a new file in the [posts][posts] directory. Simple, easy. Then [Hakyll][hakyll]
 let me automate the conversion of these files in html and the generation of
-theses pages:
+these pages:
 
 * the [posts](/pages/posts.html) page which contains all the blog posts
 * the last posts list on the [index](/) page

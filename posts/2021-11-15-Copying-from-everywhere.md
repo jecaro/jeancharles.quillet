@@ -10,7 +10,7 @@ has been working great for me so far and will probably be the object of a
 future post.
 
 One thing that gave me a lot of trouble though is how
-to handle copy/paste across theses remote tmux sessions.
+to handle copy/paste across these remote tmux sessions.
 
 # A clipboard issue
 

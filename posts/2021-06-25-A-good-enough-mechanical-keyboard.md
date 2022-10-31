@@ -34,7 +34,7 @@ These are my requirements:
 - It needs to support [qmk] so I can program shortcuts for keys I use not very
   often, like function keys for instance.
 
-At first, I tried to find a stock keyboard that ticks all theses boxes. But
+At first, I tried to find a stock keyboard that ticks all these boxes. But
 soon I realized that if I wanted all this I had to build one myself.
 
 And this started a very long hunt on the web to find all the required parts to

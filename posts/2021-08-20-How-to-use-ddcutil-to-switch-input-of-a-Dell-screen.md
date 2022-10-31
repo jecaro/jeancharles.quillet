@@ -22,7 +22,7 @@ desired input and click again. This is quite complicated for such a simple and
 common task.
 
 Fortunately the screen provides an I2C interface allowing to programmatically
-change the screen settings from a computer connected to it. On Linux theses
+change the screen settings from a computer connected to it. On Linux these
 settings can be changed using the software [ddcutil](https://www.ddcutil.com/).
 
 Firstly, in order to use this tool, the kernel module `i2c-dev` must be loaded.
@@ -95,7 +95,7 @@ And if I want to switch it back to USB-C:
 $ ddcutil setvcp 60 0x1b
 ```
 
-I only use theses two inputs so I made a script to quickly toggle between the
+I only use these two inputs so I made a script to quickly toggle between the
 two:
 
 ``` bash

@@ -21,7 +21,7 @@ Host webserver
     Hostname xx.xx.xx.xx
 ```
 
-with theses lines, calling:
+with these lines, calling:
 
 ```
 $ ssh webserver

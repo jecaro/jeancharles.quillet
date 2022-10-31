@@ -16,7 +16,7 @@ my time.
 
 I got interested again in video games running into the [sudomod
 community][sudomod] during a random web roaming. The members of this community
-build awesome handheld devices out of Raspberries or others SOCs. Theses
+build awesome handheld devices out of Raspberries or others SOCs. These
 devices are so cool that I decided I needed one even if I'm not anymore into
 video games.
 
@@ -28,7 +28,7 @@ this little handheld:
 
 It's a kit which comes with a card, a Raspberry CM3 and a 320x240 color screen.
 All I needed was a gameboy shell, some buttons, a screen protector and a
-battery. Theses things can still easily be bought on aliexpress. I was shocked
+battery. These things can still easily be bought on aliexpress. I was shocked
 to find out that it is still possible to buy brand new gameboy shells and
 buttons on aliexpress.
 
@@ -36,7 +36,7 @@ The [circuit sword][circuit-sword] can handle various button layouts. I decided
 to go with four buttons on the front and four buttons on the back. Additionally
 it embeds a WiFi module and has a USB socket, HDMI output, and a jack socket.
 
-See how theses ports fits perfectly well the existing gameboy socket
+See how these ports fits perfectly well the existing gameboy socket
 placeholders: HDMI in place of the contrast wheel, SD card in place of the
 volume wheel, USB in place of the game link port. I only had to dremel a bit to
 make room for the USB C connector. This [circuit sword][circuit-sword] is a

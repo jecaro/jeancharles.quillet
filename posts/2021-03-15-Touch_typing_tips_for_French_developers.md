@@ -40,7 +40,7 @@ followed by `space`.
 On Linux it is not too bad so to speak as the dead keys are only `" ` and `^`.
 But on Windows it is worse, as `~` and `` ` `` are also dead keys.
 
-It is very unfortunate that theses keys are pretty important shorcuts in vim:
+It is very unfortunate that these keys are pretty important shorcuts in vim:
 
 * `^`: jump to the first non-blank character of the line
 * `~`: switch case

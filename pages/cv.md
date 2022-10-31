@@ -13,7 +13,7 @@ software as well as network servers.
 
 I have had the chance to work with low level object-oriented programming such
 as C++ which I have used professionally for more than ten years, and also with
-very high level functional programming languages such as Haskell. Theses
+very high level functional programming languages such as Haskell. These
 different approaches give me a good comprehension of the mechanisms at work in
 software development, always driven by the goal of developing correct, safe and
 robust software.

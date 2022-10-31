@@ -22,7 +22,7 @@ huge C++ project. Think about something with more than 300 sub-projects
 its complexity. There were a lot of dependencies between the projects and we
 had no way to actually list them and view the dependency graph.
 
-We needed a tool to help us to handle all theses dependencies.
+We needed a tool to help us to handle all these dependencies.
 
 We were working with Microsoft Visual Studio. Its main file, also called the
 solution file, contains this graph. So this was just a matter of parsing this

@@ -14,7 +14,7 @@ available on [github][github].
 
 I use [neovim][neovim] because it has a built-in implementation of Language
 Server Protocol (LSP). It might not be as good as the other solutions such as
-theses plug-ins: [ALE](https://github.com/dense-analysis/ale),
+these plug-ins: [ALE](https://github.com/dense-analysis/ale),
 [Coc](https://github.com/neoclide/coc.nvim),
 [vim-lsp](https://github.com/prabirshrestha/vim-lsp). Actually I have no idea.
 But I tend to prefer built-in features. Firstly because it makes my experience
