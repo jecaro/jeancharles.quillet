@@ -158,7 +158,7 @@ urlCtx = field "url" url
       | matches indexPattern identifier = pure root
       | otherwise = do
         r <- getRoute identifier
-        pure $ root <> (fromMaybe mempty r)
+        pure $ root <> fromMaybe mempty r
     root = "https://jeancharles.quillet.org/"
 
 lastmodCtx :: Context String
@@ -169,7 +169,7 @@ lastmodCtx = field "lastmod" $ lastmod <=< mostRecent
     -- Get the last post item when called from the posts page or the item
     -- itself in any other case
     mostRecent item@(Item identifier _)
-      | identifier == postsIdentifier = pure . headOrItem =<< recentPosts
+      | identifier == postsIdentifier = headOrItem <$> recentPosts
       | otherwise = pure item
       where
         headOrItem = fromMaybe item . viaNonEmpty head
