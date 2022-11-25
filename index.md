@@ -25,3 +25,5 @@ and feel free to [reach out](/pages/contact.html) for any matter.
 # Recent blog posts
 
 $partial("templates/posts.html")$
+
+[More ...](/pages/posts.html)
