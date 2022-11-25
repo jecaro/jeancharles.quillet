@@ -182,8 +182,8 @@ C'est extrêmement compliqué de savoir ce que l'on doit à qui. Et même lorsqu
 l'a compris il reste encore à savoir comment effectuer le règlement ce qui est 
 toujours plus difficile que cela en a l'air. C'est très mystérieux pour moi 
 qu'il faille à la fois dire à l'organisme combien on leur doit en ayant 
-généralement soit même calculé les montants et les payer en utilisant des 
-moyens de paiement tous plus compliqués les uns que les autres.
+généralement soi même calculé les montants et les payer en utilisant des moyens 
+de paiement tous plus compliqués les uns que les autres.
 
 Ne serait-il pas plus simple d'effectuer une déclaration à l'organisme et qu'en 
 retour elle calcule elle même ce qu'on lui doit et émette une facture avec un 
