@@ -67,7 +67,7 @@ architecture.
 
 ---
 
-**[EPITECH](https://www.epitech.eu/en/)** - Rennes / France (Since 09/2021)
+**[EPITECH](https://www.epitech.eu/)** - Rennes / France (Since 09/2021)
 
 I support the students with their Haskell projects (arithmetic evaluator, Lisp
 interpreter, image compressor, ...).

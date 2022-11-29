@@ -179,4 +179,4 @@ one needs. But after that everything is pretty smoothly. And it feels good to
 be able to tune just everything about the keyboard that I use everyday.
 
 [qmk]: https://github.com/qmk/qmk_firmware
-[github]: https://github.com/jecaro/qmk_firmware/tree/jecaro_iso_azerty/keyboards/xd68/keymaps/jecaro_iso_azerty
+[github]: https://github.com/jecaro/qmk_firmware/tree/my-keyboards/keyboards/xiudi/xd68/keymaps/jecaro_iso_azerty
