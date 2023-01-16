@@ -1,5 +1,6 @@
-{-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TemplateHaskell #-}
+
+module Main (main) where
 
 import Data.Time.Format (formatTime)
 import Data.Time.Locale.Compat (defaultTimeLocale)
@@ -44,6 +45,7 @@ import Hakyll
     templateBodyCompiler,
     (.||.),
   )
+import PandocCompiler (pandocCompilerWithCode)
 
 main :: IO ()
 main = hakyll $ do
@@ -75,7 +77,7 @@ main = hakyll $ do
   match postsPattern $ do
     route $ setExtension "html"
     compile $
-      pandocCompiler
+      pandocCompilerWithCode
         -- We save the body to the field content to use it in the rss feed
         -- later on
         >>= saveSnapshot "content"
@@ -157,8 +159,8 @@ urlCtx = field "url" url
     url (Item identifier _)
       | matches indexPattern identifier = pure root
       | otherwise = do
-        r <- getRoute identifier
-        pure $ root <> fromMaybe mempty r
+          r <- getRoute identifier
+          pure $ root <> fromMaybe mempty r
     root = "https://jeancharles.quillet.org/"
 
 lastmodCtx :: Context String

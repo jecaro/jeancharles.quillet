@@ -6,20 +6,30 @@ build-type:         Simple
 executable site
   main-is:          Main.hs
   hs-source-dirs:   app
+  other-modules:    PandocCompiler
   build-depends:    base == 4.*
                   , gitrev
                   , hakyll
+                  , modern-uri
+                  , pandoc
+                  , pandoc-types
                   , relude
+                  , req
+                  , text
                   , time
                   , time-locale-compat
   mixins:           base hiding (Prelude)
                   , relude (Relude as Prelude)
-  ghc-options:      -threaded
-                    -Wall
-                    -Wcompat
-                    -Widentities
-                    -Wincomplete-record-updates
-                    -Wincomplete-uni-patterns
-                    -Wpartial-fields
-                    -Wredundant-constraints
+  ghc-options:    -threaded
+                  -Wall
+                  -Wcompat
+                  -Widentities
+                  -Wincomplete-record-updates
+                  -Wincomplete-uni-patterns
+                  -Wpartial-fields
+                  -Wredundant-constraints
+  default-extensions:
+                  DataKinds
+                  OverloadedStrings
+                  ScopedTypeVariables
   default-language: Haskell2010
