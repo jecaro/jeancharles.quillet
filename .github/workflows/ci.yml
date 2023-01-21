@@ -11,6 +11,4 @@ jobs:
       with:
         extra_nix_config: |
           access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
-    - run: nix profile install
-    - run: site build
-    - run: site check
+    - run: nix build --option sandbox false
