@@ -6,7 +6,7 @@ title: ssh config as a hosts file
 
 I'm late adopter of bash completion. I tried it a few times but I always gave
 up because I found it slow. And I hate when it blocks my shell waiting for a
-command to finish. I've recently upgrade my computers and on recent hardware,
+command to finish. I've recently upgraded my computers and on recent hardware,
 it now runs pretty smoothly. So it's time to give it another go.
 
 One feature I use the most is `ssh` host completion. At work I work with a lot
