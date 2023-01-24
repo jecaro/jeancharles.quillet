@@ -8,6 +8,9 @@
         inherit system;
         overlays = [ self.overlay ];
       });
+      fakeGit = pkgs: pkgs.writeShellScriptBin "git" ''
+        echo ${self.rev or "dirty"}
+      '';
     in
     {
       overlay = (final: prev:
@@ -23,7 +26,9 @@
             }
           ];
 
-          site = final.haskellPackages.callCabal2nix "site" ./. { };
+          site = final.haskell.lib.addBuildTool
+            (final.haskellPackages.callCabal2nix "site" ./. { })
+            (fakeGit final);
 
           jeancharles-quillet = final.stdenv.mkDerivation {
             name = "jeancharles-quillet";
