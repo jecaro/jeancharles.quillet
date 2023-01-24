@@ -12,7 +12,19 @@
     {
       overlay = (final: prev:
         {
+          cache = final.linkFarm "cache" [
+            {
+              name = "a10bb77486b482ea0d88e46e92443601674ff60ca948a6850e90510359edcf46";
+              path = builtins.fetchurl
+                {
+                  url = "https://raw.githubusercontent.com/jecaro/simple-nix-vm/94265f73fed25ed73624d4635865aa90b91405dd/vm.nix";
+                  sha256 = "sha256:0sgndz3j2qzl0mmaz5rryjbv5id9l7h5qzjz1rmp47b0pillqfjn";
+                };
+            }
+          ];
+
           site = final.haskellPackages.callCabal2nix "site" ./. { };
+
           jeancharles-quillet = final.stdenv.mkDerivation {
             name = "jeancharles-quillet";
             src = ./.;
@@ -21,12 +33,7 @@
 
             buildInputs = [ final.site ];
             buildPhase = ''
-              ${final.site}/bin/site build
-            '';
-
-            doCheck = true;
-            checkPhase = ''
-              ${final.site}/bin/site check
+              ${final.site}/bin/site build --cache-dir ${final.cache}
             '';
 
             installPhase = ''
@@ -36,6 +43,7 @@
         });
 
       packages = forAllSystems (system: {
+        cache = nixpkgsFor.${system}.cache;
         site = nixpkgsFor.${system}.site;
         jeancharles-quillet = nixpkgsFor.${system}.jeancharles-quillet;
       });
@@ -60,10 +68,10 @@
         });
 
       # Build
-      # nixos-rebuild build --option sandbox false --flake .#website-prod
-      # nix build --option sandbox false ./#nixosConfigurations.website-prod.config.system.build.toplevel
+      # nixos-rebuild build --flake .#website-prod
+      # nix build ./#nixosConfigurations.website-prod.config.system.build.toplevel
       # Deploy
-      # nixos-rebuild switch --option sandbox false --flake .#website-prod --target-host quillet.org --build-host localhost
+      # nixos-rebuild switch --flake .#website-prod --target-host quillet.org --build-host localhost
       nixosConfigurations.website-prod = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
@@ -77,7 +85,7 @@
       };
 
       # Build
-      # nix build --option sandbox false ./#nixosConfigurations.website-vm.config.system.build.vm
+      # nix build ./#nixosConfigurations.website-vm.config.system.build.vm
       # Run the VM forwarding the ports
       # QEMU_NET_OPTS="hostfwd=tcp::2222-:22,hostfwd=tcp::8888-:80,hostfwd=tcp::4444-:443" ./result/bin/run-nixos-vm
       nixosConfigurations.website-vm = nixpkgs.lib.nixosSystem {

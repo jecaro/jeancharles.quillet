@@ -12,6 +12,7 @@ import Hakyll
     Identifier,
     Item (..),
     Pattern,
+    Rules,
     applyAsTemplate,
     bodyField,
     compile,
@@ -20,12 +21,13 @@ import Hakyll
     copyFileCompiler,
     create,
     dateField,
+    defaultConfiguration,
     defaultContext,
     field,
     fromGlob,
     getItemModificationTime,
     getRoute,
-    hakyll,
+    hakyllWithExitCodeAndArgs,
     idRoute,
     listField,
     loadAll,
@@ -45,90 +47,105 @@ import Hakyll
     templateBodyCompiler,
     (.||.),
   )
+import Options (Options (..), getOptions)
 import PandocCompiler (pandocCompilerWithCode)
+import System.Environment (getProgName)
+
+rules :: FilePath -> Rules ()
+rules cache =
+  do
+    -- Copy the assets
+    forM_ ["robots.txt", "assets/*.js", "images/*"] $ \p -> match p $ do
+      route idRoute
+      compile copyFileCompiler
+
+    match "assets/*.css" $ do
+      route idRoute
+      compile compressCssCompiler
+
+    -- Create the page with the posts list
+    create [postsIdentifier] $ do
+      route idRoute
+      compile $ do
+        posts <- recentPosts
+        let archiveCtx =
+              constField "title" "Posts"
+                <> listField postsString postCtx (pure posts)
+                <> defaultContext
+
+        makeItem ""
+          >>= loadAndApplyTemplate "templates/posts.html" archiveCtx
+          >>= loadAndApplyTemplate defaultTemplate archiveCtx
+          >>= relativizeUrls
+
+    -- One page per post
+    match postsPattern $ do
+      route $ setExtension "html"
+      compile $
+        pandocCompilerWithCode cache
+          -- We save the body to the field content to use it in the rss feed
+          -- later on
+          >>= saveSnapshot "content"
+          >>= loadAndApplyTemplate defaultTemplate postCtx
+          >>= relativizeUrls
+
+    -- The rss feed of the posts
+    create ["rss.xml"] $ do
+      route idRoute
+      compile $ do
+        let feedCtx = postCtx <> bodyField "description"
+        posts <-
+          fmap (take 10) . recentFirst
+            =<< loadAllSnapshots postsPattern "content"
+        renderRss feedConfiguration feedCtx posts
+
+    -- Other pages
+    match "pages/*" $ do
+      route $ setExtension "html"
+      compile $
+        pandocCompiler
+          >>= loadAndApplyTemplate defaultTemplate (defaultContext <> gitCtx)
+          >>= relativizeUrls
+
+    -- And the index
+    match indexPattern $ do
+      route $ setExtension "html"
+      compile $ do
+        posts <- take 10 <$> recentPosts
+        let indexCtx =
+              listField postsString postCtx (pure posts)
+                <> defaultContext
+
+        pandocCompiler
+          -- to have the partial render as html
+          >>= applyAsTemplate indexCtx
+          >>= loadAndApplyTemplate defaultTemplate indexCtx
+          >>= relativizeUrls
+
+    -- The templates
+    match "templates/*" $ compile templateBodyCompiler
+
+    -- The site map
+    create ["sitemap.xml"] $ do
+      route idRoute
+      compile $ do
+        pages <- loadAll $ indexPattern .||. pagesPattern .||. postsPattern
+        let sitemapCtx =
+              listField "pages" (lastmodCtx <> priorityCtx <> urlCtx) (pure pages)
+        makeItem ("" :: String)
+          >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapCtx
 
 main :: IO ()
-main = hakyll $ do
-  -- Copy the assets
-  forM_ ["robots.txt", "assets/*.js", "images/*"] $ \p -> match p $ do
-    route idRoute
-    compile copyFileCompiler
-
-  match "assets/*.css" $ do
-    route idRoute
-    compile compressCssCompiler
-
-  -- Create the page with the posts list
-  create [postsIdentifier] $ do
-    route idRoute
-    compile $ do
-      posts <- recentPosts
-      let archiveCtx =
-            constField "title" "Posts"
-              <> listField postsString postCtx (pure posts)
-              <> defaultContext
-
-      makeItem ""
-        >>= loadAndApplyTemplate "templates/posts.html" archiveCtx
-        >>= loadAndApplyTemplate defaultTemplate archiveCtx
-        >>= relativizeUrls
-
-  -- One page per post
-  match postsPattern $ do
-    route $ setExtension "html"
-    compile $
-      pandocCompilerWithCode
-        -- We save the body to the field content to use it in the rss feed
-        -- later on
-        >>= saveSnapshot "content"
-        >>= loadAndApplyTemplate defaultTemplate postCtx
-        >>= relativizeUrls
-
-  -- The rss feed of the posts
-  create ["rss.xml"] $ do
-    route idRoute
-    compile $ do
-      let feedCtx = postCtx <> bodyField "description"
-      posts <-
-        fmap (take 10) . recentFirst
-          =<< loadAllSnapshots postsPattern "content"
-      renderRss feedConfiguration feedCtx posts
-
-  -- Other pages
-  match "pages/*" $ do
-    route $ setExtension "html"
-    compile $
-      pandocCompiler
-        >>= loadAndApplyTemplate defaultTemplate (defaultContext <> gitCtx)
-        >>= relativizeUrls
-
-  -- And the index
-  match indexPattern $ do
-    route $ setExtension "html"
-    compile $ do
-      posts <- take 10 <$> recentPosts
-      let indexCtx =
-            listField postsString postCtx (pure posts)
-              <> defaultContext
-
-      pandocCompiler
-        -- to have the partial render as html
-        >>= applyAsTemplate indexCtx
-        >>= loadAndApplyTemplate defaultTemplate indexCtx
-        >>= relativizeUrls
-
-  -- The templates
-  match "templates/*" $ compile templateBodyCompiler
-
-  -- The site map
-  create ["sitemap.xml"] $ do
-    route idRoute
-    compile $ do
-      pages <- loadAll $ indexPattern .||. pagesPattern .||. postsPattern
-      let sitemapCtx =
-            listField "pages" (lastmodCtx <> priorityCtx <> urlCtx) (pure pages)
-      makeItem ("" :: String)
-        >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapCtx
+main = do
+  progName <- getProgName
+  Options {..} <- getOptions progName conf
+  exitWith
+    =<< hakyllWithExitCodeAndArgs
+      conf
+      optHakyllOptions
+      (rules optCacheDirectory)
+  where
+    conf = defaultConfiguration
 
 -- The contexts
 
