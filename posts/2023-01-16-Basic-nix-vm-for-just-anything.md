@@ -49,7 +49,7 @@ changed here for something suitable for your screen:
 
 <a name="qemu-options"/>
 ```{.get
-url=https://raw.githubusercontent.com/jecaro/simple-nix-vm/master/vm.nix
+url=https://raw.githubusercontent.com/jecaro/simple-nix-vm/94265f73fed25ed73624d4635865aa90b91405dd/vm.nix
 from=12
 to=28
 language=nix}
@@ -59,7 +59,7 @@ The user configuration now. Being part of the wheel group makes it possible to
 use sudo if needed. You might want to change the password here.
 
 ```{.get
-url=https://raw.githubusercontent.com/jecaro/simple-nix-vm/master/vm.nix
+url=https://raw.githubusercontent.com/jecaro/simple-nix-vm/94265f73fed25ed73624d4635865aa90b91405dd/vm.nix
 from=30
 to=38
 language=nix}
@@ -68,7 +68,7 @@ language=nix}
 The internationalization options:
 
 ```{.get
-url=https://raw.githubusercontent.com/jecaro/simple-nix-vm/master/vm.nix
+url=https://raw.githubusercontent.com/jecaro/simple-nix-vm/94265f73fed25ed73624d4635865aa90b91405dd/vm.nix
 from=8
 to=10
 language=nix}
@@ -77,7 +77,7 @@ language=nix}
 The xserver options:
 
 ```{.get
-url=https://raw.githubusercontent.com/jecaro/simple-nix-vm/master/vm.nix
+url=https://raw.githubusercontent.com/jecaro/simple-nix-vm/94265f73fed25ed73624d4635865aa90b91405dd/vm.nix
 from=40
 to=51
 language=nix}
@@ -91,7 +91,7 @@ available [here](https://www.kraxel.org/blog/2021/05/qemu-cut-paste/).
 One can tweak the packages available:
 
 ```{.get
-url=https://raw.githubusercontent.com/jecaro/simple-nix-vm/master/vm.nix
+url=https://raw.githubusercontent.com/jecaro/simple-nix-vm/94265f73fed25ed73624d4635865aa90b91405dd/vm.nix
 from=56
 to=66
 language=nix}
@@ -104,7 +104,7 @@ You also might want to ssh to the VM from the host, so just enable the ssh
 server on the VM:
 
 ```{.get
-url=https://raw.githubusercontent.com/jecaro/simple-nix-vm/master/vm.nix
+url=https://raw.githubusercontent.com/jecaro/simple-nix-vm/94265f73fed25ed73624d4635865aa90b91405dd/vm.nix
 from=53
 to=54
 language=nix}
