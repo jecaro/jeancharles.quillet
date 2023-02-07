@@ -141,8 +141,8 @@ climbing, reading, playing the guitar or attending rock concerts.
 I did quite a lot of volunteering in concert venues in Rennes
 ([Antipode](https://antipode-mjc.com/) 2011-2015, [le jardin
 moderne](http://www.jardinmoderne.org/) 2009-2010) and in music festivals
-(Epipapu (2009, 2010) and [la Route du Rock](https://www.laroutedurock.com/)
-(2008 - 2018).
+(Epipapu 2009 - 2010 and [la Route du Rock](https://www.laroutedurock.com/)
+2008 - 2018).
 
 [Keyghost]: https://www.keyghost.com/
 [ONERA]: https://www.onera.fr/
