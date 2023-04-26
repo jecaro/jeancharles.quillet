@@ -4,9 +4,10 @@ title: Going split
 
 ---
 
-After I built [my keyboard](2021-06-25-A-good-enough-mechanical-keyboard.html), 
-I really thought I was done with DIY mechanical keyboards. As any people into 
-this hobby already knows, I was totally wrong.
+After I built [my 
+keyboard](/posts/2021-06-25-A-good-enough-mechanical-keyboard.html), I really 
+thought I was done with DIY mechanical keyboards. As any people into this hobby 
+already knows, I was totally wrong.
 
 It all started when I began to feel pain in my right wrist. Scared by carpal 
 tunnel syndrome, I was looking for a way to relieve it. I looked carefully at 

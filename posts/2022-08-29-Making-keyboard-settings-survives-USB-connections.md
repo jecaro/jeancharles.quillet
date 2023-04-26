@@ -7,11 +7,11 @@ title: Making keyboard settings survives USB connections
 As a developer and a vim user, I rely heavily on a good typing experience. I am 
 constantly trying to improve it whether it is in becoming a better touch typist 
 or using a better keyboard. About this, as [stated 
-before](./2021-03-15-Touch_typing_tips_for_French_developers.html), I like to 
-use the not so good French `ISO-AZERTY-FR` layout. As much as I like to stick 
-with the default, some keys are purely not compatible with vim. I'm talking 
-here about the key: `^` which is used in vim to get back to the first character 
-of the line.
+before](/posts/2021-03-15-Touch_typing_tips_for_French_developers.html), I like 
+to use the not so good French `ISO-AZERTY-FR` layout. As much as I like to 
+stick with the default, some keys are purely not compatible with vim. I'm 
+talking here about the key: `^` which is used in vim to get back to the first 
+character of the line.
 
 First of all, what is a dead key ? When you press one of these keys, nothing 
 appears on the screen. The character appears only when you press a second key. 
