@@ -13,6 +13,15 @@ post](/posts/2021-02-22-This_website_is_generated_by_Hakyll.html) and its
 source code is fully available on
 [github](https://github.com/jecaro/jeancharles.quillet).
 
+# [Mprisqueeze](https://github.com/jecaro/mprisqueeze)
+
+[mprisqueeze] is a wrapper to the software Squeezebox [squeezelite]. It starts 
+[squeezelite] in the background and exposes an [MPRIS] interface to control it 
+from any [MPRIS] client such as [playerctl].
+
+It is a project I have realized to learn Rust. I have written a [blog 
+post][mpris-post] about this experience.
+
 # [Bigball](https://github.com/jecaro/bigball)
 
 [bigball](https://github.com/jecaro/bigball) was my second real life Haskell
@@ -86,6 +95,8 @@ fun to learn all this.
 When I find the time, I like to contribute to open source projects. I made some
 modest contributions to these ones:
 
+* [LDAP](https://github.com/ezyang/ldap-haskell): This package provides LDAP 
+  interface code for Haskell programs, binding to the C LDAP API.
 * [ldap-client](https://github.com/alasconnect/ldap-client): Pure Haskell LDAP
   client library implementing (the parts of) RFC 4511.
 * [smos](https://github.com/NorfairKing/smos): a comprehensive self-management
@@ -99,4 +110,11 @@ modest contributions to these ones:
   program that gives you a guided Hledger workflow
 * [lib3ds](https://github.com/hoopoe/lib3ds): a free toolkit for handling the
   "3DS" format for 3D model files
+
+[LMS]: https://github.com/Logitech/slimserver
+[MPRIS]: https://specifications.freedesktop.org/mpris-spec/latest/
+[mpris-post]:/posts/2023-06-01-A-perfect-pet-project-to-learn-Rust.html
+[mprisqueeze]: https://github.com/jecaro/mprisqueeze
+[playerctl]: https://github.com/altdesktop/playerctl
+[squeezelite]: https://github.com/ralph-irving/squeezelite
 
