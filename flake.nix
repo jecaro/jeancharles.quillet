@@ -1,5 +1,5 @@
 {
-  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
+  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
   outputs = { self, nixpkgs }:
     let
       supportedSystems = [ "x86_64-linux" "x86_64-darwin" ];
@@ -76,7 +76,7 @@
       # nixos-rebuild build --flake .#website-prod
       # nix build ./#nixosConfigurations.website-prod.config.system.build.toplevel
       # Deploy
-      # nixos-rebuild switch --flake .#website-prod --target-host quillet.org --build-host localhost
+      # nixos-rebuild switch --flake .#website-prod --target-host quillet.org
       nixosConfigurations.website-prod = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
