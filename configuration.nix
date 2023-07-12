@@ -13,7 +13,7 @@
     globalRedirect = "jeancharles.quillet.org";
     enableACME = true;
     addSSL = true;
-    serverAliases = [ "www.quillet.org" "kodreizh.com" "www.kodreizh.com" ];
+    serverAliases = [ "www.quillet.org" ];
   };
 
   security.acme.acceptTerms = true;
