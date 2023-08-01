@@ -16,12 +16,38 @@
       overlay = (final: prev:
         {
           cache = final.linkFarm "cache" [
+            # Basic nix VM for just anything
             {
               name = "a10bb77486b482ea0d88e46e92443601674ff60ca948a6850e90510359edcf46";
               path = builtins.fetchurl
                 {
                   url = "https://raw.githubusercontent.com/jecaro/simple-nix-vm/94265f73fed25ed73624d4635865aa90b91405dd/vm.nix";
                   sha256 = "sha256:0sgndz3j2qzl0mmaz5rryjbv5id9l7h5qzjz1rmp47b0pillqfjn";
+                };
+            }
+            # Deploying a static website with nix
+            {
+              name = "1b0e4f37e2a7ddca40c14883b131af03e78910504a95d759915182141fc27e12";
+              path = builtins.fetchurl
+                {
+                  url = "https://raw.githubusercontent.com/jecaro/jeancharles.quillet/81c7c9832ab0ea11f881dbc840db07e3cf34f3db/flake.nix";
+                  sha256 = "sha256:01d739bqg1gn58l27px7a3pr086sx557h7yz2xvq2lipa3c3nasv";
+                };
+            }
+            {
+              name = "1ad6a29b7b1ac4f52e7cfa1e993f0b3995cb6560b4c9ae0e92862acb7d6abd73";
+              path = builtins.fetchurl
+                {
+                  url = "https://raw.githubusercontent.com/jecaro/jeancharles.quillet/6bffc9b5a949ddb831b33930b4d5f25cfbcd814e/configuration.nix";
+                  sha256 = "sha256:00qxpnmnmpcv74s3j9qrmhm1vjzr90r374qni8jw6ilsicy5s18w";
+                };
+            }
+            {
+              name = "304cdc707d98ac430235d0dec7bbf1c8867954fab0c89fa185592bcd273dc6ce";
+              path = builtins.fetchurl
+                {
+                  url = "https://raw.githubusercontent.com/jecaro/jeancharles.quillet/6bffc9b5a949ddb831b33930b4d5f25cfbcd814e/flake.nix";
+                  sha256 = "sha256:0zfn6rq9p9b3ivm40bia92b16x3msc21710g78idxggqdzsfs1xz";
                 };
             }
           ];
