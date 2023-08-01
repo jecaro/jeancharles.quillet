@@ -95,7 +95,7 @@ tooling, cargo and the language server, are great.
 
 I can see some Haskell influence there but not that much actually. Rust is 
 still a very imperative language, purity or higher-kinded types are nowhere to 
-be found here. I would say this is more a general functional programing 
+be found here. I would say this is more a general functional programming 
 influence with the usual features: immutability by default, sum types and 
 pattern matching.
 
