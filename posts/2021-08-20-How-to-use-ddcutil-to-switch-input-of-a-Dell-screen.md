@@ -1,6 +1,7 @@
 ---
 
 title: How to use ddcutil to switch input of a Dell screen
+lastmod: 2022-10-31
 
 ---
 

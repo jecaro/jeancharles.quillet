@@ -1,6 +1,7 @@
 ---
 
 title: A perfect pet project to learn Rust
+lastmod: 2023-08-01
 
 ---
 

@@ -1,6 +1,7 @@
 ---
 
 title: The home-manager function that changes everything
+lastmod: 2023-02-07
 
 ---
 

@@ -1,6 +1,7 @@
 ---
 
 title: Embed the git hash into a binary with nix
+lastmod: 2022-04-20
 
 ---
 

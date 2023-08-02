@@ -1,6 +1,7 @@
 ---
 
 title: ssh config as a hosts file
+lastmod: 2023-01-24
 
 ---
 

@@ -1,6 +1,7 @@
 ---
 
 title: Local mariadb server with nix-shell
+lastmod: 2022-03-02
 
 ---
 

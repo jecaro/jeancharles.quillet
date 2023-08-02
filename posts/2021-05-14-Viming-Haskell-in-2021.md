@@ -1,6 +1,7 @@
 ---
 
 title: Viming Haskell in 2021
+lastmod: 2022-10-31
 toc: true
 
 ---

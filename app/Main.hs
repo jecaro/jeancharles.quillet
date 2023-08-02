@@ -2,8 +2,6 @@
 
 module Main (main) where
 
-import Data.Time.Format (formatTime)
-import Data.Time.Locale.Compat (defaultTimeLocale)
 import Development.GitRev (gitHash)
 import Hakyll
   ( Compiler,
@@ -25,7 +23,7 @@ import Hakyll
     defaultContext,
     field,
     fromGlob,
-    getItemModificationTime,
+    getMetadataField,
     getRoute,
     hakyllWithExitCodeAndArgs,
     idRoute,
@@ -68,14 +66,14 @@ rules cache =
       route idRoute
       compile $ do
         posts <- recentPosts
-        let archiveCtx =
+        let archivesCtx =
               constField "title" "Posts"
                 <> listField postsString postCtx (pure posts)
                 <> defaultContext
 
         makeItem ""
-          >>= loadAndApplyTemplate "templates/posts.html" archiveCtx
-          >>= loadAndApplyTemplate defaultTemplate archiveCtx
+          >>= loadAndApplyTemplate "templates/posts.html" archivesCtx
+          >>= loadAndApplyTemplate defaultTemplate archivesCtx
           >>= relativizeUrls
 
     -- One page per post
@@ -131,7 +129,7 @@ rules cache =
       compile $ do
         pages <- loadAll $ indexPattern .||. pagesPattern .||. postsPattern
         let sitemapCtx =
-              listField "pages" (lastmodCtx <> priorityCtx <> urlCtx) (pure pages)
+              listField "pages" (lastModCtx <> priorityCtx <> urlCtx) (pure pages)
         makeItem ("" :: String)
           >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapCtx
 
@@ -154,6 +152,25 @@ postCtx =
   dateField "date" "%B %e, %Y"
     <> constField "show-title" "true"
     <> defaultContext
+
+lastModCtx :: Context String
+lastModCtx = field lastModString lastMod
+  where
+    lastMod (Item identifier _)
+      | matches archivesPattern identifier = do
+          postsIdentifiers <- fmap itemIdentifier <$> recentPosts
+          lastMods <- traverse getLastMod postsIdentifiers
+          failWhenNothing identifier $ lastOfAllMods lastMods
+      | otherwise = failWhenNothing identifier =<< getLastMod identifier
+    failWhenNothing identifier =
+      maybe
+        ( noResult $
+            "Unable to get last modification metadata from: "
+              <> show identifier
+        )
+        pure
+    getLastMod = flip getMetadataField lastModString
+    lastOfAllMods = listToMaybe . sort . catMaybes
 
 -- Make the git hash appear in the meta tag of the contact page
 gitCtx :: Context String
@@ -180,25 +197,13 @@ urlCtx = field "url" url
           pure $ root <> fromMaybe mempty r
     root = "https://jeancharles.quillet.org/"
 
-lastmodCtx :: Context String
-lastmodCtx = field "lastmod" $ lastmod <=< mostRecent
-  where
-    -- Return the last modification time of an item
-    lastmod = pure . formatTimeDefault <=< getItemModificationTime . itemIdentifier
-    -- Get the last post item when called from the posts page or the item
-    -- itself in any other case
-    mostRecent item@(Item identifier _)
-      | identifier == postsIdentifier = headOrItem <$> recentPosts
-      | otherwise = pure item
-      where
-        headOrItem = fromMaybe item . viaNonEmpty head
-
-    formatTimeDefault = formatTime defaultTimeLocale "%F"
-
 -- Strings and patterns
 
 postsPattern :: Pattern
 postsPattern = "posts/*"
+
+archivesPattern :: Pattern
+archivesPattern = fromGlob "pages/posts.html"
 
 postsIdentifier :: Identifier
 postsIdentifier = "pages/posts.html"
@@ -217,6 +222,9 @@ indexString = "index.md"
 
 defaultTemplate :: Identifier
 defaultTemplate = "templates/default.html"
+
+lastModString :: String
+lastModString = "lastmod"
 
 -- Others
 

@@ -1,6 +1,7 @@
 ---
 
 title: A good enough mechanical keyboard
+lastmod: 2022-10-31
 toc: true
 
 ---

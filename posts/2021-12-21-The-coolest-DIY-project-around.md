@@ -1,6 +1,7 @@
 ---
 
 title: The coolest DIY project around
+lastmod: 2022-10-31
 
 ---
 

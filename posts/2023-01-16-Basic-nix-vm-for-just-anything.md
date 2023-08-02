@@ -1,6 +1,7 @@
 ---
 
 title: Basic nix VM for just anything
+lastmod: 2023-01-24
 
 ---
 

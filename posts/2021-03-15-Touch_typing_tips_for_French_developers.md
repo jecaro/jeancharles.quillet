@@ -1,6 +1,7 @@
 ---
 
 title: Touch typing tips for French developers
+lastmod: 2022-10-31
 toc: true
 
 ---

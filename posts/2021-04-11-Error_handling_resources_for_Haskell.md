@@ -1,6 +1,7 @@
 ---
 
 title: Error handling resources for Haskell
+lastmod: 2021-10-22
 toc: true
 
 ---

@@ -1,6 +1,7 @@
 ---
 
 title: Deploying a static website with nix
+lastmod: 2023-08-01
 toc: true
 
 ---

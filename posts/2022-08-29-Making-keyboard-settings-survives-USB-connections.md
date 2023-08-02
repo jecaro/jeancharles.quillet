@@ -1,6 +1,7 @@
 ---
 
 title: Making keyboard settings survives USB connections
+lastmod: 2023-04-26
 
 ---
 

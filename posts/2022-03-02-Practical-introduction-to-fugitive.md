@@ -1,6 +1,7 @@
 ---
 
 title: Practical introduction to fugitive
+lastmod: 2022-03-02
 toc: true
 
 ---

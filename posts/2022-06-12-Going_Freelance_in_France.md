@@ -1,6 +1,7 @@
 ---
 
 title: Going Freelance in France
+lastmod: 2022-11-25
 toc: true
 
 ---
