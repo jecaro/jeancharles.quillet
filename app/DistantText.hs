@@ -6,7 +6,6 @@ import Data.List (lookup)
 import qualified Data.Text as Text (unpack)
 import Network.HTTP.Req (Option, Scheme (..), Url, useURI)
 import Text.URI (mkURI, renderBs)
-import Prelude hiding (Option)
 
 type ReqURL = Either (Url 'Http, Option 'Http) (Url 'Https, Option 'Https)
 
