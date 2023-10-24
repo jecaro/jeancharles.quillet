@@ -2,22 +2,22 @@
 
 title: CV
 toc: include
-lastmod: 2023-06-02
+lastmod: 2023-10-24
 
 ---
 
 # Summary
 
-I am a software developer with a large experience in very diverse fields.  I
-have worked as a backend developer, have wrote desktop applications, simulation
-software as well as network servers.
+I am a software developer with a large experience in very diverse fields. I 
+have worked as a backend developer, have written desktop applications, 
+simulation software as well as network servers.
 
-I have had the chance to work with low level object-oriented programming such
-as C++ which I have used professionally for more than ten years, and also with
-very high level functional programming languages such as Haskell. These
-different approaches give me a good comprehension of the mechanisms at work in
-software development, always driven by the goal of developing correct, safe and
-robust software.
+I have had the chance to work with low-level object-oriented programming such 
+as C++ which I have used professionally for more than ten years, and also with 
+very high-level functional programming languages such as Haskell. These 
+different approaches give me a good comprehension of the mechanisms at work in 
+software development, always driven by the goal of developing correct, safe, 
+and robust software.
 
 My CV is also available in pdf in
 [english](https://github.com/jecaro/cv/raw/master/resume-en/jeancharles.quillet-en.pdf)
@@ -44,9 +44,9 @@ typing and functional programming.
 **System administration**
 
 Over the years, I had to administrate Linux systems both professionally and
-personally. My favorites Linux distribution is [Arch
-Linux](https://archlinux.org/), but I know also quite well
-[NixOS](https://nixos.org/), [Ubuntu](https://ubuntu.com/),
+personally. My favorite Linux distribution is [NixOS](https://nixos.org/). But 
+I have been a long time user of [Arch Linux](https://archlinux.org/) and I also 
+know quite well [Ubuntu](https://ubuntu.com/),
 [Debian](https://www.debian.org/) and [CentOS](https://www.centos.org/).
 
 **Languages**
@@ -63,12 +63,13 @@ control
 **[Secucloud](https://www.secucloud.com/)** - Hamburg, Germany / Remote (Since
 11/2020)
 
-As a Haskell developer, I work on network security software in a cloud
-architecture.
+As a Haskell developer, I work on cloud network security software. My main 
+focus is on a REST API to configure a SASE system and the integration of Active 
+Directory.
 
 ---
 
-**[EPITECH](https://www.epitech.eu/)** - Rennes / France (Since 09/2021)
+**[EPITECH](https://www.epitech.eu/)** - Rennes / France (09/2021 - 06/2023)
 
 I support the students with their Haskell projects (arithmetic evaluator, Lisp
 interpreter, image compressor, ...).
