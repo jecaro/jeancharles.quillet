@@ -2,7 +2,7 @@
 
 title: Projects
 toc: include
-lastmod: 2023-10-24
+lastmod: 2023-11-07
 
 ---
 
@@ -21,6 +21,9 @@ source code is fully available on
 Store](https://play.google.com/store/apps/details?id=org.jecaro.diverk). It 
 allows you to browse a GitHub repository from your Android phone and is able to 
 render markdown files.
+
+Some context about the development of this project appears in this 
+[post][diverk-post].
 
 # [Mprisqueeze][mprisqueeze]
 
@@ -141,10 +144,11 @@ modest contributions to these ones:
 [MPRIS]: https://specifications.freedesktop.org/mpris-spec/latest/
 [bigball]: https://github.com/jecaro/bigball
 [diverk]: https://github.com/jecaro/diverk
-[minihasklisp]: https://github.com/jecaro/minihasklisp
-[mpris-post]:/posts/2023-06-01-A-perfect-pet-project-to-learn-Rust.html
-[mprisqueeze]: https://github.com/jecaro/mprisqueeze
+[diverk-post]: /posts/2023-11-07-Writing-an-Android-app-in-Haskell.html
 [hscalendar]: https://github.com/jecaro/hscalendar
+[minihasklisp]: https://github.com/jecaro/minihasklisp
+[mpris-post]: /posts/2023-06-01-A-perfect-pet-project-to-learn-Rust.html
+[mprisqueeze]: https://github.com/jecaro/mprisqueeze
 [playerctl]: https://github.com/altdesktop/playerctl
 [squeezelite]: https://github.com/ralph-irving/squeezelite
 [squeezelite]: https://github.com/ralph-irving/squeezelite

@@ -55,6 +55,23 @@
                   sha256 = "sha256:0zfn6rq9p9b3ivm40bia92b16x3msc21710g78idxggqdzsfs1xz";
                 };
             }
+            # Writing an Android app in Haskell
+            {
+              name = "f5ab2eef8cdec243828a391109b780c1c9cb66a2ece8562b3eaa583299db440a";
+              path = builtins.fetchurl
+                {
+                  url = "https://raw.githubusercontent.com/jecaro/diverk/e777f2d44ed4ecdb08ed8f2b3c832d327bea7611/shell.nix";
+                  sha256 = "sha256:0i8iz1qrlqf53vlnskgnhbb4sk25d1dgvf0zavmqfrj0h3cqck93";
+                };
+            }
+            {
+              name = "462fec01f8f32382a601569f1d9596498e506fdd1a71e66051d3c095a2bffccf";
+              path = builtins.fetchurl
+                {
+                  url = "https://raw.githubusercontent.com/jecaro/diverk/78ff0683f0b77d40d907ff19f4a9771c5406957a/default.nix";
+                  sha256 = "sha256:1dsliwx6x1n3zmf2icpnyy3gzg9rmyy613smcxvrmxj616lij6dm";
+                };
+            }
           ];
 
           site = final.haskell.lib.addBuildTool
