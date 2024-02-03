@@ -60,7 +60,8 @@ control
 
 # Work experience
 
-**[Secucloud](https://www.secucloud.com/)** - Hamburg, Germany / Remote (Since
+**[Secucloud](https://www.linkedin.com/company/secucloud/)** - Hamburg, Germany 
+/ Remote (Since
 11/2020)
 
 As a Haskell developer, I work on cloud network security software. My main 

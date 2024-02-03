@@ -18,7 +18,7 @@ bunch of simulation software in a sub-contractor company for the French MoD,
 and various research laboratories.
 
 Now I develop cloud based network security software in Haskell for the great
-folks of [Secucloud](https://www.secucloud.com/).
+folks of [Secucloud](https://www.linkedin.com/company/secucloud/).
 
 Check out my [CV](/pages/cv.html) if you want to know more about my experience
 and feel free to [reach out](/pages/contact.html) for any matter.
