@@ -2,7 +2,7 @@
 
 title: CV
 toc: include
-lastmod: 2023-10-24
+lastmod: 2024-04-16
 
 ---
 
@@ -19,10 +19,10 @@ different approaches give me a good comprehension of the mechanisms at work in
 software development, always driven by the goal of developing correct, safe, 
 and robust software.
 
-My CV is also available in pdf in
-[english](https://github.com/jecaro/cv/raw/master/resume-en/jeancharles.quillet-en.pdf)
+My CV is also available in PDF in
+[English](https://github.com/jecaro/cv/raw/master/resume-en/jeancharles.quillet-en.pdf)
 and
-[french](https://github.com/jecaro/cv/raw/master/resume-fr/jeancharles.quillet-fr.pdf).
+[French](https://github.com/jecaro/cv/raw/master/resume-fr/jeancharles.quillet-fr.pdf).
 
 # Skills
 
@@ -30,7 +30,7 @@ and
 
 With all the different projects I have seen and work on, I now have a pretty
 good understanding of the tradeoffs which are important in software design.  I
-also have a good knowledge on how to handle legacy code which is a big part of
+also have good knowledge on how to handle legacy code which is a big part of
 the job.
 
 **Programming languages**
@@ -60,9 +60,21 @@ control
 
 # Work experience
 
+**[Tiko Energy](https://tiko.energy)** - Zurich, Switzerland / Remote (since 
+01/2024)
+
+I work on a complex backend software connected to a bunch of IOT devices. It is 
+based on a microservice architecture.
+
+My day-to-day job consists in dealing with a heavy legacy codebase, fixing bugs 
+and implementing core feature.
+
+The backend is mostly written Haskell and Java.
+
+---
+
 **[Secucloud](https://www.linkedin.com/company/secucloud/)** - Hamburg, Germany 
-/ Remote (Since
-11/2020)
+/ Remote (11/2020 - 10/2023)
 
 As a Haskell developer, I work on cloud network security software. My main 
 focus is on a REST API to configure a SASE system and the integration of Active 
