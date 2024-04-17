@@ -2,7 +2,7 @@
 
 title: Projects
 toc: include
-lastmod: 2023-11-07
+lastmod: 2024-04-17
 
 ---
 
@@ -34,29 +34,21 @@ from any [MPRIS] client such as [playerctl].
 It is a project I have realized to learn Rust. I have written a [blog 
 post][mpris-post] about this experience.
 
-# Toys
+# [Systranything][systranything]
 
-## [Minihasklisp][minihasklisp]
+[systranything] lets you put anything in your system tray. It uses a YAML file 
+which describes the icon to put in the system tray, a context menu and 
+callbacks as shell commands.
 
-[minihasklisp] is a small Lisp interpreter with minimal dependencies. It even 
-uses its own [applicative 
-parser](https://github.com/jecaro/minihasklisp/blob/master/src/parser/Parser.hs) 
-implementation. It is quite impressive to see how powerful such a small 
-language can be.
-
-## [Wolfram][wolfram]
-
-[wolfram] is a simple implementation of [elementary cellular 
-automaton](https://en.wikipedia.org/wiki/Elementary_cellular_automaton) in 
-Haskell. Have fun trying all the 255 rules!
+I use it to turn on and off my VPN, change my monitor and audio setup.
 
 # [Bigball][bigball]
 
 [bigball] was my second real life Haskell project. When I was working for 
 [Scalian](https://www.scalian.com), we had this huge C++ project. Think about 
-something with more than 300 sub-projects (libraries or executables). It was 
+something with more than 300 subprojects (libraries or executables). It was 
 tough dealing with such a huge code base and its complexity. There were a lot 
-of dependencies between the projects and we had no way to actually list them 
+of dependencies between the projects, and we had no way to actually list them 
 and view the dependency graph.
 
 We needed a tool to help us to handle all these dependencies.
@@ -67,7 +59,7 @@ file, creating the dependency graph and for each project output a file with it.
 
 The software wasn't very difficult to write. All the required libraries were
 available on [hackage](https://hackage.haskell.org/). My workmates were pretty
-happy with it and it was quickly integrated in our CI.
+happy with it, and it was quickly integrated in our CI.
 
 You can check it out on
 [github](https://github.com/jecaro/bigball).
@@ -119,10 +111,26 @@ any trouble. This project has allowed me to get to use
 [QuickCheck](https://hackage.haskell.org/package/QuickCheck). It was a great
 fun to learn all this.
 
+# Toys
+
+## [Minihasklisp][minihasklisp]
+
+[minihasklisp] is a small Lisp interpreter with minimal dependencies. It even 
+uses its own [applicative 
+parser](https://github.com/jecaro/minihasklisp/blob/master/src/parser/Parser.hs) 
+implementation. It is quite impressive to see how powerful such a small 
+language can be.
+
+## [Wolfram][wolfram]
+
+[wolfram] is a simple implementation of [elementary cellular 
+automaton](https://en.wikipedia.org/wiki/Elementary_cellular_automaton) in 
+Haskell. Have fun trying all the 255 rules!
+
 # Open source contributions
 
 When I find the time, I like to contribute to open source projects. I made some
-modest contributions to these ones:
+modest contributions to these:
 
 * [LDAP](https://github.com/ezyang/ldap-haskell): This package provides LDAP 
   interface code for Haskell programs, binding to the C LDAP API.
@@ -143,14 +151,14 @@ modest contributions to these ones:
 [LMS]: https://github.com/Logitech/slimserver
 [MPRIS]: https://specifications.freedesktop.org/mpris-spec/latest/
 [bigball]: https://github.com/jecaro/bigball
-[diverk]: https://github.com/jecaro/diverk
 [diverk-post]: /posts/2023-11-07-Writing-an-Android-app-in-Haskell.html
+[diverk]: https://github.com/jecaro/diverk
 [hscalendar]: https://github.com/jecaro/hscalendar
 [minihasklisp]: https://github.com/jecaro/minihasklisp
 [mpris-post]: /posts/2023-06-01-A-perfect-pet-project-to-learn-Rust.html
 [mprisqueeze]: https://github.com/jecaro/mprisqueeze
 [playerctl]: https://github.com/altdesktop/playerctl
 [squeezelite]: https://github.com/ralph-irving/squeezelite
-[squeezelite]: https://github.com/ralph-irving/squeezelite
+[systranything]: https://github.com/jecaro/systranything
 [wolfram]: https://github.com/jecaro/wolfram
 
