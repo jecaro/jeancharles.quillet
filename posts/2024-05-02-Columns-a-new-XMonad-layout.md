@@ -1,7 +1,7 @@
 ---
 
 title: Columns - a new XMonad layout
-lastmod: 2024-05-02
+lastmod: 2024-05-21
 
 ---
 
@@ -29,7 +29,7 @@ showcased in the video.
 
 I can change the focus of the windows using [WindowNavigation]. Every other 
 command is handled by sending custom messages to the layout. See the [source 
-code][gist] for details.
+code][code] for details.
 
 With this layout, I can arrange the windows really in any way I want while 
 keeping them always tiled.
@@ -40,14 +40,9 @@ my own. However, it is limited to two columns. Another interesting one is
 [rowOfColumns]. It is pretty similar to mine, but it wasn't working very well 
 with the tabbed sub-layout if I remember correctly.
 
-That's it. The source of the layout is available in this [gist].
-
-I hope it can be useful for other people. I am usually more than happy to 
-contribute to OSS but in this very case I do not want to send a PR to 
-[xmonad-contribu]. I find this repository cluttered enough with hacky modules 
-that I do not want to add another one (pretty hacky too).
-
-But feel free to use it as you will and let me know if you like it.
+That's it. The layout has now been 
+[upstreamed](https://github.com/xmonad/xmonad-contrib/pull/887) and [the source 
+code][code] is fully available in the [xmonad-contrib] repository.
 
 [xmonad]: https://xmonad.org/
 [xmonad-contrib]: https://github.com/xmonad/xmonad-contrib
@@ -61,5 +56,6 @@ https://hackage.haskell.org/package/xmonad-contrib-0.18.0/docs/XMonad-Layout-Gro
 https://hackage.haskell.org/package/xmonad-contrib-0.18.0/docs/XMonad-Layout-Tabbed.html
 [WindowNavigation]: 
 https://hackage.haskell.org/package/xmonad-contrib-0.18.0/docs/XMonad-Layout-WindowNavigation.html
-[gist]: https://gist.github.com/jecaro/a6684da4f6e5891211f19d2a7c959b44
+[code]: 
+https://github.com/jecaro/xmonad-contrib/blob/a1ef65ff957cc97ca0d237c2f07802a5f90a5117/XMonad/Layout/Columns.hs
 
