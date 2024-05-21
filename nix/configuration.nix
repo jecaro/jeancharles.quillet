@@ -33,6 +33,12 @@ in
   networking.firewall.allowedTCPPorts = [ 22 80 443 ];
   services.sshd.enable = true;
 
+  nix.optimise.automatic = true;
+  services.transmission = {
+    enable = true;
+    openFirewall = true;
+  };
+
   system.stateVersion = "23.05";
 
   systemd.services.diverk = {
