@@ -1,7 +1,7 @@
 ---
 
 title: Writing an Android app in Haskell
-lastmod: 2023-11-09
+lastmod: 2024-05-31
 toc: true
 
 ---
@@ -201,7 +201,8 @@ Here you can find the best resources I have found on the subject:
 - Presentation of the library by its creator Ryan Trinkle: [part 
   1](https://www.youtube.com/watch?v=mYvkcskJbc4), [part 
   2](https://www.youtube.com/watch?v=3qfc9XFVo2c)
-- [The official tutorial](https://reflex-frp.org/tutorial)
+- [The official tutorial](https://reflex-frp.org/tutorial) and [my 
+  playground][playground]
 - [Great tutorials](https://qfpl.io/projects/reflex/) made by the Queensland 
   Functional Programming Lab
 - Real World Reflex: a video addressing more advanced concepts
@@ -217,4 +218,5 @@ Here you can find the best resources I have found on the subject:
 [Reflex]: https://reflex-frp.org/
 [nixpkgs]: https://github.com/NixOS/nixpkgs
 [obsidian]: https://obsidian.systems/
+[playground]: https://github.com/jecaro/reflex-tutorial
 
