@@ -127,27 +127,6 @@ language can be.
 automaton](https://en.wikipedia.org/wiki/Elementary_cellular_automaton) in 
 Haskell. Have fun trying all the 255 rules!
 
-# Open source contributions
-
-When I find the time, I like to contribute to open source projects. I made some
-modest contributions to these:
-
-* [LDAP](https://github.com/ezyang/ldap-haskell): This package provides LDAP 
-  interface code for Haskell programs, binding to the C LDAP API.
-* [ldap-client](https://github.com/alasconnect/ldap-client): Pure Haskell LDAP
-  client library implementing (the parts of) RFC 4511.
-* [smos](https://github.com/NorfairKing/smos): a comprehensive self-management
-  system
-* [hatrace](https://github.com/nh2/hatrace): scripted strace
-* [path](https://github.com/commercialhaskell/path): support for well-typed
-  paths in Haskell
-* [termonad](https://github.com/cdepillabout/termonad): a terminal emulator
-  configurable in Haskell
-* [hledger-flow](https://github.com/apauley/hledger-flow): a command-line
-  program that gives you a guided Hledger workflow
-* [lib3ds](https://github.com/hoopoe/lib3ds): a free toolkit for handling the
-  "3DS" format for 3D model files
-
 [LMS]: https://github.com/Logitech/slimserver
 [MPRIS]: https://specifications.freedesktop.org/mpris-spec/latest/
 [bigball]: https://github.com/jecaro/bigball
