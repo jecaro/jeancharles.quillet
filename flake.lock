@@ -3,11 +3,11 @@
     "diverk-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1707311168,
-        "narHash": "sha256-Ri75EsInFczrtf8ejywstxJP2GteEELhju27jvLukwI=",
+        "lastModified": 1727944390,
+        "narHash": "sha256-14YxxrpgC/TADM2boVoDU9RF5iTLYd6uRCFFYUyUbr8=",
         "owner": "jecaro",
         "repo": "diverk",
-        "rev": "4e6f9c7276b037f71b6dce81da4d2e1cb2cc793e",
+        "rev": "4b67bcce5f4cc6550e49764909e064cfa19d70a2",
         "type": "github"
       },
       "original": {
