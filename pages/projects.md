@@ -2,7 +2,7 @@
 
 title: Projects
 toc: include
-lastmod: 2024-11-24
+lastmod: 2024-11-21
 
 ---
 

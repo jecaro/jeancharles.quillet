@@ -1,7 +1,7 @@
 ---
 
 title: Going split
-lastmod: 2023-04-26
+lastmod: 2024-11-21
 
 ---
 
@@ -97,7 +97,7 @@ multimedia keys:
 - for the right one: `Toggle mute` when pushed, `Volume up/down` when rotated
 
 The full layout is available 
-[here](https://github.com/jecaro/qmk_firmware/blob/90e9c01d5739e5df5d75dfb7e6f7a0e5b7f8f4f4/keyboards/sofle/keymaps/jecaro/keymap.c).
+[here](https://github.com/jecaro/qmk_firmware/blob/408111ab253d5e4cfe8d75ec6949ac389f8e5e35/keyboards/sofle/keymaps/jecaro/keymap.c).
 
 The thing that I found a bit disappointing was the OLED screens. Really it is 
 of no actual use and it is super hard to make them hold very sturdy to the 

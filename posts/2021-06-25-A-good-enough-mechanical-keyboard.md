@@ -1,7 +1,7 @@
 ---
 
 title: A good enough mechanical keyboard
-lastmod: 2022-10-31
+lastmod: 2024-11-21
 toc: true
 
 ---
@@ -62,7 +62,7 @@ interested in this.
 
 I setup an AZERTY layout with a few custom options and combos that might be the
 subject of a another post. My configuration is available on
-[github](https://github.com/jecaro/qmk_firmware/tree/jecaro_iso_azerty/keyboards/xd68/keymaps/jecaro_iso_azerty).
+[github](https://github.com/jecaro/qmk_firmware/blob/408111ab253d5e4cfe8d75ec6949ac389f8e5e35/keyboards/xiudi/xd68/keymaps/jecaro_iso_azerty/keymap.c).
 
 # Switches
 
