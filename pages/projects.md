@@ -2,7 +2,7 @@
 
 title: Projects
 toc: include
-lastmod: 2024-04-17
+lastmod: 2024-11-24
 
 ---
 
@@ -48,8 +48,8 @@ I use it to turn on and off my VPN, change my monitor and audio setup.
 [Scalian](https://www.scalian.com), we had this huge C++ project. Think about 
 something with more than 300 subprojects (libraries or executables). It was 
 tough dealing with such a huge code base and its complexity. There were a lot 
-of dependencies between the projects, and we had no way to actually list them 
-and view the dependency graph.
+of inter dependencies between the projects, and we had no way to actually list 
+them and view the dependency graph.
 
 We needed a tool to help us to handle all these dependencies.
 
@@ -118,8 +118,7 @@ fun to learn all this.
 [minihasklisp] is a small Lisp interpreter with minimal dependencies. It even 
 uses its own [applicative 
 parser](https://github.com/jecaro/minihasklisp/blob/master/src/parser/Parser.hs) 
-implementation. It is quite impressive to see how powerful such a small 
-language can be.
+implementation.
 
 ## [Wolfram][wolfram]
 
@@ -127,17 +126,32 @@ language can be.
 automaton](https://en.wikipedia.org/wiki/Elementary_cellular_automaton) in 
 Haskell. Have fun trying all the 255 rules!
 
+# Neovim plugins
+
+## [ghcid-error-file.nvim]
+
+A plugin for [ghcid].
+
+## [fugitive-difftool.nvim]
+
+Diff branches in [neovim] with [fugitive].
+
 [LMS]: https://github.com/Logitech/slimserver
 [MPRIS]: https://specifications.freedesktop.org/mpris-spec/latest/
 [bigball]: https://github.com/jecaro/bigball
 [diverk-post]: /posts/2023-11-07-Writing-an-Android-app-in-Haskell.html
 [diverk]: https://github.com/jecaro/diverk
+[fugitive-difftool.nvim]: https://github.com/jecaro/fugitive-difftool.nvim
+[ghcid-error-file.nvim]: https://github.com/jecaro/ghcid-error-file.nvim
+[ghcid]: https://github.com/ndmitchell/ghcid
 [hscalendar]: https://github.com/jecaro/hscalendar
 [minihasklisp]: https://github.com/jecaro/minihasklisp
 [mpris-post]: /posts/2023-06-01-A-perfect-pet-project-to-learn-Rust.html
 [mprisqueeze]: https://github.com/jecaro/mprisqueeze
+[neovim]: https://neovim.io/
 [playerctl]: https://github.com/altdesktop/playerctl
 [squeezelite]: https://github.com/ralph-irving/squeezelite
 [systranything]: https://github.com/jecaro/systranything
 [wolfram]: https://github.com/jecaro/wolfram
+[fugitive]: https://github.com/tpope/vim-fugitive
 
