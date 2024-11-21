@@ -33,6 +33,11 @@ in
   networking.firewall.allowedTCPPorts = [ 22 80 443 ];
   services.sshd.enable = true;
 
+  services.tailscale = {
+    enable = true;
+    useRoutingFeatures = "server";
+  };
+
   nix.optimise.automatic = true;
   services.transmission = {
     enable = true;
