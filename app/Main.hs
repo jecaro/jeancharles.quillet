@@ -98,7 +98,7 @@ rules cache =
         renderRss feedConfiguration feedCtx posts
 
     -- Other pages
-    match "pages/*" $ do
+    match pagesPattern $ do
       route $ setExtension "html"
       compile $
         pandocCompiler
@@ -212,7 +212,7 @@ postsString :: String
 postsString = "posts"
 
 pagesPattern :: Pattern
-pagesPattern = "pages/*"
+pagesPattern = "pages/**"
 
 indexPattern :: Pattern
 indexPattern = fromGlob indexString
