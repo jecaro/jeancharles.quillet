@@ -51,7 +51,8 @@ lastmod: 2024-11-26
 # Neovim plugins
 
 - [ghcid-error-file.nvim](https://github.com/jecaro/ghcid-error-file.nvim): A 
-  plugin for [ghcid]
+  plugin for [ghcid]. [Read 
+  more...](/posts/2024-11-28-ghcid-error-file.nvim.html)
 
   lua, neovim
 

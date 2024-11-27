@@ -1,7 +1,7 @@
 ---
 
 title: Haskell dev workflow with ghcid and neovim
-lastmod: 2024-09-04
+lastmod: 2024-11-28
 toc: true
 
 ---
@@ -139,6 +139,9 @@ I have a better solution for this as well, but it is slightly more involved and
 requires a bit of lua code. I will write about it in a future post.
 
 That's it for today. Let me know if you find this useful.
+
+28-11-2024: Read the follow-up in [this next 
+post](/posts/2024-11-28-ghcid-error-file.nvim.html).
 
 # Related tools
 
