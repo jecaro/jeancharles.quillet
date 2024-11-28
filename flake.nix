@@ -68,8 +68,6 @@
             ghcid
             cabal-install
           ];
-          # Change the prompt to show that you are in a devShell
-          shellHook = "export PS1='\\[\\e[1;34m\\]dev > \\[\\e[0m\\]'";
         });
 
       # Build
