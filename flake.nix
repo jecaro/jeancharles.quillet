@@ -13,9 +13,13 @@
         inherit system;
         overlays = [ self.overlay ];
       });
-      fakeGit = pkgs: pkgs.writeShellScriptBin "git" ''
-        echo ${self.rev or "dirty"}
-      '';
+      fakeGit = pkgs:
+        if builtins.hasAttr "rev" self then
+          pkgs.writeShellScriptBin "git" ''
+            echo ${self.rev}
+          ''
+        else
+          pkgs.git;
     in
     {
       overlay = (final: prev:
