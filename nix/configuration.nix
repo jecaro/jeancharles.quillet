@@ -30,21 +30,17 @@ in
   security.acme.certs."jeancharles.quillet.org".email = email;
   security.acme.certs."quillet.org".email = email;
 
-  networking.firewall.allowedTCPPorts = [ 22 80 443 ];
+  networking.firewall = {
+    allowedTCPPorts = [ 22 80 443 51413 ];
+    allowedUDPPorts = [ 51413 ];
+
+    extraCommands = ''
+      ${pkgs.iptables}/bin/iptables -t nat -A POSTROUTING -o tailscale0 -j MASQUERADE
+      ${pkgs.iptables}/bin/iptables -t nat -A PREROUTING -p udp --dport 51413 -j DNAT --to-destination 100.108.81.35:51413
+      ${pkgs.iptables}/bin/iptables -t nat -A PREROUTING -p tcp --dport 51413 -j DNAT --to-destination 100.108.81.35:51413
+    '';
+  };
   services.sshd.enable = true;
-
-  services.tailscale = {
-    enable = true;
-    useRoutingFeatures = "server";
-  };
-
-  nix.optimise.automatic = true;
-  services.transmission = {
-    enable = true;
-    openFirewall = true;
-  };
-
-  system.stateVersion = "23.05";
 
   systemd.services.diverk = {
     description = "Diverk";
@@ -57,4 +53,22 @@ in
       RestartSec = 10;
     };
   };
+
+  services.tailscale = {
+    enable = true;
+    useRoutingFeatures = "server";
+  };
+
+  nix = {
+    optimise.automatic = true;
+
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+    };
+    channel.enable = false;
+    # Turn on flakes
+    package = pkgs.nixVersions.stable; # or versioned attributes like nix_2_7
+  };
+
+  system.stateVersion = "23.05";
 }
