@@ -1,7 +1,8 @@
 ---
 
 title: Projects
-lastmod: 2024-11-26
+lastmod: 2024-17-12
+toc: true
 
 ---
 
