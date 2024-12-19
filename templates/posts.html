@@ -1,7 +1,12 @@
-<ul>
 $for(posts)$
-<li>
-<a href="$url$">$title$</a> - $date$
-</li>
+  $if(first)$
+  <h1>$year$</h1>
+  <ul>
+  $endif$
+    <li>
+      <a href="$url$">$title$</a> - $date$
+    </li>
+  $if(last)$
+  </ul>
+  $endif$
 $endfor$
-</ul>

@@ -2,6 +2,9 @@
 
 module Main (main) where
 
+import Data.List.Extra (nubOrdOn)
+import Data.Time (Year, defaultTimeLocale, toGregorian, utctDay)
+import Data.Tuple.Extra (fst3)
 import Development.GitRev (gitHash)
 import Hakyll
   ( Compiler,
@@ -13,6 +16,7 @@ import Hakyll
     Rules,
     applyAsTemplate,
     bodyField,
+    boolField,
     compile,
     compressCssCompiler,
     constField,
@@ -23,6 +27,7 @@ import Hakyll
     defaultContext,
     field,
     fromGlob,
+    getItemUTC,
     getMetadataField,
     getRoute,
     hakyllWithExitCodeAndArgs,
@@ -65,10 +70,27 @@ rules cache =
     create [postsIdentifier] $ do
       route idRoute
       compile $ do
-        posts <- recentPosts
-        let archivesCtx =
+        posts <- getRecentPosts
+
+        let identifiers = itemIdentifier <$> posts
+        years <- traverse getYear identifiers
+
+        let yearsAndIdentifiers = zip years identifiers
+            -- list of posts that are the first/last published in their year
+            -- used for the loop in the template
+            firstInYear = snd <$> nubOrdOn fst yearsAndIdentifiers
+            lastInYear = snd <$> nubOrdOn fst (reverse yearsAndIdentifiers)
+
+            recentPostCtx =
+              inListField "first" firstInYear
+                <> inListField "last" lastInYear
+                <> dateField "date" "%B %e"
+                <> dateField "year" "%Y"
+                <> defaultContext
+
+            archivesCtx =
               constField "title" "Posts"
-                <> listField postsString postCtx (pure posts)
+                <> listField postsString recentPostCtx (pure posts)
                 <> defaultContext
 
         makeItem ""
@@ -109,7 +131,7 @@ rules cache =
     match indexPattern $ do
       route $ setExtension "html"
       compile $ do
-        posts <- take 10 <$> recentPosts
+        posts <- take 10 <$> getRecentPosts
         let indexCtx =
               listField postsString postCtx (pure posts)
                 <> defaultContext
@@ -158,7 +180,7 @@ lastModCtx = field lastModString lastMod
   where
     lastMod (Item identifier _)
       | matches archivesPattern identifier = do
-          postsIdentifiers <- fmap itemIdentifier <$> recentPosts
+          postsIdentifiers <- fmap itemIdentifier <$> getRecentPosts
           lastMods <- traverse getLastMod postsIdentifiers
           failWhenNothing identifier $ lastOfAllMods lastMods
       | otherwise = failWhenNothing identifier =<< getLastMod identifier
@@ -171,6 +193,11 @@ lastModCtx = field lastModString lastMod
         pure
     getLastMod = flip getMetadataField lastModString
     lastOfAllMods = listToMaybe . sort . catMaybes
+
+inListField :: String -> [Identifier] -> Context a
+inListField name = boolField name . identifierIn
+  where
+    identifierIn = flip (elem . itemIdentifier)
 
 -- Make the git hash appear in the meta tag of the contact page
 gitCtx :: Context String
@@ -228,8 +255,11 @@ lastModString = "lastmod"
 
 -- Others
 
-recentPosts :: Compiler [Item String]
-recentPosts = recentFirst =<< loadAll postsPattern
+getRecentPosts :: Compiler [Item String]
+getRecentPosts = recentFirst =<< loadAll postsPattern
+
+getYear :: Identifier -> Compiler Year
+getYear = fmap (fst3 . toGregorian . utctDay) . getItemUTC defaultTimeLocale
 
 feedConfiguration :: FeedConfiguration
 feedConfiguration =
