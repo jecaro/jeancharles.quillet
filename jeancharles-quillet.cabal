@@ -7,6 +7,7 @@ executable site
   main-is:          Main.hs
   hs-source-dirs:   app
   other-modules:    Cache
+                  , Compilers
                   , DistantText
                   , Options
                   , PandocCompiler
