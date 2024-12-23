@@ -400,7 +400,8 @@ html.dark #mobile-nav .menu .button,html.dark #mobile-nav .menu .container{
 #mobile-nav .menu .button:before{
     content:"\f078";
     color:#ddd;
-    font:16px "Font Awesome 5 Free";
+    font-size:16px;
+    font-family:"FontAwesome";
     line-height:30px;
     position:absolute;
     top:0;
