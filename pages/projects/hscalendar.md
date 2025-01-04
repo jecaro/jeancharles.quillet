@@ -1,9 +1,11 @@
 ---
 
 title: hscalendar
-lastmod: 2024-11-26
+lastmod: 2025-01-04
 
 ---
+
+# [hscalendar]
 
 I started working on [hscalendar] because I was beginning to feel confident 
 with Haskell. I already had implemented a few [terminal 

@@ -1,9 +1,11 @@
 ---
 
 title: bigball
-lastmod: 2024-11-26
+lastmod: 2025-01-04
 
 ---
+
+# [bigball]
 
 [bigball] was my second real life Haskell project. When I was working for 
 [Scalian](https://www.scalian.com), we had this huge C++ project. Think about 
