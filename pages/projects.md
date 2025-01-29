@@ -1,7 +1,7 @@
 ---
 
 title: Projects
-lastmod: 2024-17-12
+lastmod: 2025-01-25
 toc: true
 
 ---
@@ -48,6 +48,11 @@ toc: true
   more...](/pages/projects/bigball.html)
 
   haskell, nix
+
+- [pomodozig](https://github.com/jecaro/pomodozig): Terminal based pomodoro 
+  timer embeddable in polybar.
+
+  zig, nix
 
 # Neovim plugins
 
