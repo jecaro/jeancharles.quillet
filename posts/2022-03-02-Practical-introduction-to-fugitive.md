@@ -1,7 +1,7 @@
 ---
 
 title: Practical introduction to fugitive
-lastmod: 2022-03-02
+lastmod: 2025-02-19
 toc: true
 
 ---
@@ -201,6 +201,13 @@ get back to the current version of the current file any time with `:Gedit`.
 Another handy trick is to reach the last commit that has touched the current
 file: `:Gedit !`.
 
+## Diffing two different branches
+
+This is currently not possible out of the box with [fugitive]. However I have 
+written a small plugin to do just that, only for neovim tho. It uses 
+[fugitive] under the hood and is available on my github. It is called 
+[fugitive-difftool.nvim](https://github.com/jecaro/fugitive-difftool.nvim).
+
 # Conclusion
 
 I hope that these use case descriptions have made the demonstration that there
@@ -212,3 +219,4 @@ fugitive` and be thankful to [Tim Pope](https://github.com/tpope) for allowing
 us not to have to quit vim when in need for `git` !
 
 [fugitive]: https://github.com/tpope/vim-fugitive
+
