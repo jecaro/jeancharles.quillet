@@ -1,7 +1,7 @@
 ---
 
 title: Columns - a new XMonad layout
-lastmod: 2024-05-21
+lastmod: 2025-02-21
 
 ---
 
@@ -16,7 +16,7 @@ really.
 
 Let's first start with a quick demo of the layout in action:
 
-![](/images/columns.mkv)
+![](/images/columns.mp4)
 
 As one can see in the video, the layout organizes the windows in columns. You 
 can have as many columns as you like. The windows can be freely moved from one 
