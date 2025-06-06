@@ -1,7 +1,7 @@
 ---
 
 title: Projects
-lastmod: 2025-01-25
+lastmod: 2025-08-25
 toc: true
 
 ---
@@ -34,6 +34,14 @@ toc: true
   menu from a YAML file with shell commands
 
   haskell, gtk, nix
+
+# Gaming
+
+- [circuix-sword](https://github.com/jecaro/circuix-sword): NixOS in a gameboy 
+  shell. A DIY retro gaming handheld based on a Raspberry Pi Compute Module 3. 
+  [Read more...](/posts/2025-08-13-NixOS-in-a-gameboy-shell.html)
+
+  raspberry pi, C, nix
 
 # Command line tools
 
