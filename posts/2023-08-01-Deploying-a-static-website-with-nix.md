@@ -1,7 +1,7 @@
 ---
 
 title: Deploying a static website with nix
-lastmod: 2023-08-01
+lastmod: 2025-06-17
 toc: true
 
 ---
@@ -120,8 +120,12 @@ And that's it! Now the webserver can be updated at any time with all the
 reproducibility guaranties that nix provides.
 
 This is basically how this website is deployed. You can have a look at the 
-details in the [repository](https://github.com/jecaro/jeancharles.quillet/) 
+details in the 
+[repository](https://github.com/jecaro/jeancharles.quillet/tree/8838838df0341a331da56b91bb8f5f90869bb3f7) 
 itself.
+
+17-06-2025: This configuration is now in a private repository for security 
+reason.
 
 [nixos-infect]: https://github.com/elitak/nixos-infect
 

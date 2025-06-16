@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "diverk-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1742590295,
-        "narHash": "sha256-jVX0f+EgXibapAaRvg/kZRbkV4djRrUwce19qskokQY=",
-        "owner": "jecaro",
-        "repo": "diverk",
-        "rev": "3807c713fe81425bcc6a25e86ae545665c56755c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "jecaro",
-        "repo": "diverk",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1749086602,
@@ -34,7 +18,6 @@
     },
     "root": {
       "inputs": {
-        "diverk-src": "diverk-src",
         "nixpkgs": "nixpkgs"
       }
     }
