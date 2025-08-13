@@ -1,7 +1,7 @@
 ---
 
 title: Writing an Android app in Haskell
-lastmod: 2024-05-31
+lastmod: 2025-10-01
 toc: true
 
 ---
@@ -209,9 +209,8 @@ Here you can find the best resources I have found on the subject:
   - [video](https://www.youtube.com/watch?v=dNBUDAU9sv4)
   - [slides](https://github.com/mightybyte/real-world-reflex/blob/master/index.md)
 
-[^1]: Except for [tenjinreader](https://github.com/dfordivam/tenjinreader/) on 
-    the [Play 
-    Store](https://play.google.com/store/apps/details?id=com.blueimpact.tenjinreader)
+[^1]: Except for [tenjinreader](https://github.com/dfordivam/tenjinreader/) 
+    ~~on the Play Store~~ Not there anymore.
 
 [FRP]: https://en.wikipedia.org/wiki/Functional_reactive_programming
 [HLS]: https://github.com/haskell/haskell-language-server
