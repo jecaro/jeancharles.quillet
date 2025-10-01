@@ -1,7 +1,7 @@
 ---
 
 title: Going Freelance in France
-lastmod: 2022-11-25
+lastmod: 2025-10-01
 toc: true
 
 ---
@@ -197,8 +197,8 @@ net-entreprises[^1] en particulier, sur lequel on se connecte pour récupérer
 les fameuses *DSN*, ces documents qui contiennent les paramètres qui permettent 
 d'automatiser les paiements, est particulièrement caricatural.
 
-J'ai aussi découvert qu'il me fallait faire une [déclaration d'échange de 
-service](https://www.douane.gouv.fr/service-en-ligne/ouverture?code_teleservice=DES&sid=&app=68) 
+J'ai aussi découvert qu'il me fallait faire une [déclaration européenne de 
+service](https://www.douane.gouv.fr/service-en-ligne/declaration-europeenne-de-services-des) 
 à la douane chaque mois. Et ce alors que je facture en UE.
 
 La grande surprise de cette expérience fut que j'ai réalisé que le *pouvoir 
