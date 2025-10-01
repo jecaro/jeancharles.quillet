@@ -1,7 +1,7 @@
 ---
 
 title: Multiple components in ghci is finally here
-lastmod: 2025-03-24
+lastmod: 2025-10-01
 
 ---
 
@@ -73,7 +73,7 @@ succeeds. It is super useful to run the tests on any change for example. Let's
 try this:
 
 ```
-$ ghcid -c "cabal repl test:my-app-tests lib:my-app -T :main"
+$ ghcid -c "cabal repl test:my-app-tests lib:my-app" -T :main
 Command is not supported (yet) in multi-mode
 ```
 
