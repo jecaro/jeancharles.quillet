@@ -1,7 +1,7 @@
 ---
 
 title: Projects
-lastmod: 2025-08-25
+lastmod: 2025-11-17
 toc: true
 
 ---
@@ -19,7 +19,7 @@ toc: true
 - [this website](https://github.com/jecaro/jeancharles.quillet): [built with 
   Hakyll](/posts/2021-02-22-This_website_is_generated_by_Hakyll.html) and 
   [deployed with 
-  nix](/posts/2023-08-01-Deploying-a-static-website-with-nix.html). 
+  nix](/posts/2023-08-01-Deploying-a-static-website-with-nix.html) 
 
   haskell, nix
 
@@ -45,6 +45,11 @@ toc: true
 
 # Command line tools
 
+- [htagcli](https://github.com/jecaro/htagcli): Command line audio tagger and 
+  music library organizer
+
+  haskell, nix
+
 - [mprisqueeze](https://github.com/jecaro/mprisqueeze): MPRIS interface for 
   squeezelite. [Read 
   more...](/posts/2023-06-01-A-perfect-pet-project-to-learn-Rust.html)
@@ -58,7 +63,7 @@ toc: true
   haskell, nix
 
 - [pomodozig](https://github.com/jecaro/pomodozig): Terminal based pomodoro 
-  timer embeddable in polybar.
+  timer embeddable in polybar
 
   zig, nix
 
