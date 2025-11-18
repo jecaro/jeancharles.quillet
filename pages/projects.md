@@ -1,7 +1,7 @@
 ---
 
 title: Projects
-lastmod: 2025-11-17
+lastmod: 2025-11-18
 toc: true
 
 ---
@@ -46,7 +46,8 @@ toc: true
 # Command line tools
 
 - [htagcli](https://github.com/jecaro/htagcli): Command line audio tagger and 
-  music library organizer
+  music library organizer. [Read 
+  more...](/posts/2025-11-18-Htagcli-a-new-command-line-audio-tagger.html)
 
   haskell, nix
 
