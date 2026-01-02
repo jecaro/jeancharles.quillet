@@ -1,7 +1,7 @@
 ---
 
 title: Htagcli - a new command line audio tagger
-lastmod: 2025-11-18
+lastmod: 2026-01-02
 toc: true
 
 ---
@@ -41,22 +41,24 @@ check the library consistency. I plan to add auto-tagging features similar to
 [beets], and I'm still considering how to handle normalization. We'll see how 
 it evolves.
 
-I like these is a well-scoped personal projects, small but non-trivial, and 
-which solve a real problem for me. Looking at the git history, I realized I 
-started this three years ago but didn't have the time to push it forward. I'm 
-thrilled to finally have it in a very usable state.
+I like these well-scoped personal projects, small but non-trivial, and which 
+solve a real problem for me. Looking at the git history, I realized I started 
+this three years ago but didn't have the time to push it forward. I'm thrilled 
+to finally have it in a very usable state.
 
 # Roadmap
 
 Here are the features I plan to implement soon:
 
-- Handle disc ID tags
-- Check that cover art size is within a configurable range
-- Ensure no missing tracks in an album
-- Verify genre consistency at the artist level
+- ~~Handle disc ID tags~~
+- ~~Check that cover art size is within a configurable range~~
+- ~~Ensure no missing tracks in an album~~
+- ~~Verify genre consistency at the artist level~~[^1]
 
 Another major goal is to scrape metadata from third-party sources like 
 [MusicBrainz], [Discogs], and [Bandcamp] to automatically tag files correctly.
+
+[^1]: All done in version [v0.1.1.0](https://github.com/jecaro/htagcli/releases/tag/v0.1.1.0)
 
 [Bandcamp]: https://bandcamp.com/
 [Discogs]: https://www.discogs.com/
