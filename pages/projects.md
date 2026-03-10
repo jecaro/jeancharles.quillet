@@ -47,7 +47,8 @@ toc: true
 
 - [mqttooth](https://github.com/jecaro/mqttooth): A bridge that subscribes to 
   MQTT topics (zigbee2mqtt) and exposes sensor data over Bluetooth Low Energy 
-  (BLE) using the standard Environmental Sensing service.
+  (BLE) using the standard Environmental Sensing service. [Read 
+  more...](/posts/2026-03-10-The-Badger-2350-is-a-cool-e-ink-badge.html)
 
   raspberry pi, rust, python, bluetooth, mqtt, nix
 
