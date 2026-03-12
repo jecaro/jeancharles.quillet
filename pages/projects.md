@@ -1,7 +1,7 @@
 ---
 
 title: Projects
-lastmod: 2025-11-18
+lastmod: 2026-03-12
 toc: true
 
 ---
@@ -13,7 +13,7 @@ toc: true
   [Google 
   Play](https://play.google.com/store/apps/details?id=org.jecaro.diverk). [Read 
   more...](/posts/2023-11-07-Writing-an-Android-app-in-Haskell.html)
-  
+
   haskell, reflex, nix
 
 - [this website](https://github.com/jecaro/jeancharles.quillet): [built with 
@@ -25,7 +25,7 @@ toc: true
 
 - [hscalendar](https://github.com/jecaro/hscalendar): A time tracking software. 
   [Read more...](/pages/projects/hscalendar.html)
-  
+
   haskell, elm, docker
 
 # Desktop
@@ -42,6 +42,14 @@ toc: true
   [Read more...](/posts/2025-08-13-NixOS-in-a-gameboy-shell.html)
 
   raspberry pi, C, nix
+
+# IoT
+
+- [mqttooth](https://github.com/jecaro/mqttooth): A bridge that subscribes to 
+  MQTT topics (zigbee2mqtt) and exposes sensor data over Bluetooth Low Energy 
+  (BLE) using the standard Environmental Sensing service.
+
+  raspberry pi, rust, python, bluetooth, mqtt, nix
 
 # Command line tools
 
