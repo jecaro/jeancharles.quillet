@@ -1,7 +1,7 @@
 ---
 
 title: The coolest DIY project around
-lastmod: 2022-10-31
+lastmod: 2026-05-23
 
 ---
 
@@ -66,4 +66,4 @@ Zelda, Super Metroid or Another World (but only in the train otherwise it feels
 like I'm wasting my time).
 
 [circuit-sword]: https://github.com/kiteretro/Circuit-Sword
-[sudomod]: https://sudomod.com/
+[sudomod]: https://web.archive.org/web/2026/https://sudomod.com/
