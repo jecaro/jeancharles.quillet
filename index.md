@@ -1,7 +1,7 @@
 ---
 
 title: Home
-lastmod: 2024-12-02
+lastmod: 2026-06-02
 
 ---
 
@@ -22,5 +22,5 @@ $partial("templates/recent-posts.html")$
 
 [More ...](/pages/posts.html)
 
-[CV]: https://github.com/jecaro/cv/raw/master/resume-en/jeancharles.quillet-en.pdf
+[CV]: https://github.com/jecaro/cv/raw/master/jeancharles.quillet-en.pdf
 
