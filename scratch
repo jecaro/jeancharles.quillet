@@ -1,0 +1,5 @@
+warning: Git tree '/home/jc/development/jeancharles.quillet' is dirty
+warning: flake output attribute 'overlay' is deprecated; use 'overlays.default' instead
+warning: flake output attribute 'defaultPackage' is deprecated; use 'packages.<system>.default' instead
+warning: flake output attribute 'devShell' is deprecated; use 'devShells.<system>.default' instead
+
