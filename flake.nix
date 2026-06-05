@@ -47,6 +47,17 @@
         cache = nixpkgsFor.${system}.cache;
         site = nixpkgsFor.${system}.site;
         jeancharles-quillet = nixpkgsFor.${system}.jeancharles-quillet;
+        checkLinks =
+          let
+            pkgs = nixpkgsFor.${system};
+            # hakyll expect the site to be in the `_site` directory
+            siteCopy = pkgs.linkFarm
+              "jeancharles-quillet" [{ name = "_site"; path = pkgs.jeancharles-quillet; }];
+          in
+          pkgs.writeShellScriptBin "check-links" ''
+            cd ${siteCopy}
+            ${pkgs.site}/bin/site check
+          '';
       });
 
       defaultPackage = forAllSystems (system: self.packages.${system}.jeancharles-quillet);
