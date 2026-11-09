@@ -1,7 +1,7 @@
 ---
 
 title: Projects
-lastmod: 2026-03-12
+lastmod: 2026-11-09
 toc: true
 
 ---
@@ -43,7 +43,14 @@ toc: true
 
   raspberry pi, C, nix
 
-# IoT
+# Embedded
+
+- [rainbowduino-rs](https://github.com/jecaro/rainbowduino-rs): Rust firmware 
+  for the [Seeed Studio Rainbowduino v2.0][rainbowduino], an ATmega328 driver 
+  board for an 8x8 RGB LED matrix, with a library to drive several boards over 
+  I2C as a single display
+
+  arduino, rust, i2c, nix
 
 - [mqttooth](https://github.com/jecaro/mqttooth): A bridge that subscribes to 
   MQTT topics (zigbee2mqtt) and exposes sensor data over Bluetooth Low Energy 
@@ -110,3 +117,4 @@ toc: true
 [neovim]: https://neovim.io/
 [fugitive]: https://github.com/tpope/vim-fugitive
 
+[rainbowduino]: https://wiki.seeedstudio.com/Rainbowduino_LED_driver_platform-ATmega328/
