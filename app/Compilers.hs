@@ -194,9 +194,10 @@ lastModCtx :: Context String
 lastModCtx = field lastModString lastMod
   where
     lastMod (Item identifier _)
-      | matches postsPattern identifier = do
+      -- Pages listing posts change with each new post
+      | matches (postsPattern .||. indexPattern) identifier = do
           postsIdentifiers <- fmap itemIdentifier <$> getRecentPosts
-          lastMods <- traverse getLastMod postsIdentifiers
+          lastMods <- traverse getLastMod (identifier : postsIdentifiers)
           failWhenNothing identifier $ lastOfAllMods lastMods
       | otherwise = failWhenNothing identifier =<< getLastMod identifier
     failWhenNothing identifier =
@@ -207,7 +208,7 @@ lastModCtx = field lastModString lastMod
         )
         pure
     getLastMod = flip getMetadataField lastModString
-    lastOfAllMods = listToMaybe . sort . catMaybes
+    lastOfAllMods = viaNonEmpty last . sort . catMaybes
 
 inListField :: String -> [Identifier] -> Context a
 inListField name = boolField name . identifierIn
@@ -270,4 +271,3 @@ lastModString = "lastmod"
 
 getRecentPosts :: Compiler [Item String]
 getRecentPosts = recentFirst =<< loadAll postPattern
-
